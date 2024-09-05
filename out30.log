@@ -1,0 +1,1248 @@
+Executing action: monitor
+Serial port /dev/ttyUSB0
+Connecting....
+Detecting chip type... ESP32-S3
+Running idf_monitor in directory /home/corfu/mpc/corfu/toven_wifi_easy_connect
+Executing "/home/corfu/.espressif/python_env/idf5.2_py3.10_env/bin/python /home/corfu/esp/esp-idf/tools/idf_monitor.py -p /dev/ttyUSB0 -b 115200 --toolchain-prefix xtensa-esp32s3-elf- --target esp32s3 --revision 0 /home/corfu/mpc/corfu/toven_wifi_easy_connect/build/dpp-enrollee.elf -m '/home/corfu/.espressif/python_env/idf5.2_py3.10_env/bin/python' '/home/corfu/esp/esp-idf/tools/idf.py'"...
+ESP-ROM:esp32s3-20210327
+Build:Mar 27 2021
+rst:0x1 (POWERON),boot:0x8 (SPI_FAST_FLASH_BOOT)
+SPIWP:0xee
+mode:DIO, clock div:1
+load:0x3fce3810,len:0x24d8
+load:0x403c9700,len:0x4
+load:0x403c9704,len:0xf74
+load:0x403cc700,len:0x3900
+entry 0x403c9a04
+[0;32mI (28) boot: ESP-IDF v5.2.1 2nd stage bootloader[0m
+[0;32mI (28) boot: compile time Sep  3 2024 20:57:07[0m
+[0;32mI (28) boot: Multicore bootloader[0m
+D (32) bootloader_flash: non-XMC chip detected by SFDP Read (C8), skip.[0m
+D (38) bootloader_flash: mmu set block paddr=0x00000000 (was 0xffffffff)[0m
+[0;32mI (45) boot: chip revision: v0.2[0m
+D (49) boot.esp32s3: magic e9[0m
+D (52) boot.esp32s3: segments 04[0m
+D (55) boot.esp32s3: spi_mode 02[0m
+D (58) boot.esp32s3: spi_speed 0f[0m
+D (62) boot.esp32s3: spi_size 01[0m
+[0;32mI (65) boot.esp32s3: Boot SPI Speed : 80MHz[0m
+[0;32mI (70) boot.esp32s3: SPI Mode       : DIO[0m
+[0;32mI (74) boot.esp32s3: SPI Flash Size : 2MB[0m
+D (79) boot: Enabling RTCWDT(9000 ms)[0m
+[0;32mI (83) boot: Enabling RNG early entropy source...[0m
+D (88) bootloader_flash: rodata starts from paddr=0x00008000, size=0xc00, will be mapped to vaddr=0x3c000000[0m
+V (98) bootloader_flash: after mapping, starting from paddr=0x00000000 and vaddr=0x3c000000, 0x10000 bytes are mapped[0m
+D (109) boot: mapped partition table 0x8000 at 0x3c008000[0m
+D (114) flash_parts: partition table verified, 4 entries[0m
+[0;32mI (120) boot: Partition Table:[0m
+[0;32mI (123) boot: ## Label            Usage          Type ST Offset   Length[0m
+D (131) boot: load partition table entry 0x3c008000[0m
+D (136) boot: type=1 subtype=2[0m
+[0;32mI (139) boot:  0 nvs              WiFi data        01 02 00009000 00006000[0m
+D (146) boot: load partition table entry 0x3c008020[0m
+D (151) boot: type=1 subtype=1[0m
+[0;32mI (154) boot:  1 phy_init         RF data          01 01 0000f000 00001000[0m
+D (162) boot: load partition table entry 0x3c008040[0m
+D (167) boot: type=0 subtype=0[0m
+[0;32mI (170) boot:  2 factory          factory app      00 00 00010000 00100000[0m
+[0;32mI (178) boot: End of partition table[0m
+D (182) boot: Trying partition index -1 offs 0x10000 size 0x100000[0m
+D (188) esp_image: reading image header @ 0x10000[0m
+D (193) bootloader_flash: mmu set block paddr=0x00010000 (was 0xffffffff)[0m
+D (200) esp_image: image header: 0xe9 0x05 0x02 0x01 40375608[0m
+V (206) esp_image: loading segment header 0 at offset 0x10018[0m
+V (211) esp_image: segment data length 0x296dc data starts 0x10020[0m
+V (218) esp_image: segment 0 map_segment 1 segment_data_offs 0x10020 load_addr 0x3c0a0020[0m
+[0;32mI (226) esp_image: segment 0: paddr=00010020 vaddr=3c0a0020 size=296dch (169692) map[0m
+D (234) esp_image: free data page_count 0x00000200[0m
+D (239) bootloader_flash: rodata starts from paddr=0x00010020, size=0x296dc, will be mapped to vaddr=0x3c000000[0m
+V (249) bootloader_flash: after mapping, starting from paddr=0x00010000 and vaddr=0x3c000000, 0x30000 bytes are mapped[0m
+V (291) esp_image: loading segment header 1 at offset 0x396fc[0m
+D (292) bootloader_flash: mmu set block paddr=0x00030000 (was 0xffffffff)[0m
+V (293) esp_image: segment data length 0x4e54 data starts 0x39704[0m
+V (299) esp_image: segment 1 map_segment 0 segment_data_offs 0x39704 load_addr 0x3fc99600[0m
+[0;32mI (307) esp_image: segment 1: paddr=00039704 vaddr=3fc99600 size=04e54h ( 20052) load[0m
+D (316) esp_image: free data page_count 0x00000200[0m
+D (321) bootloader_flash: rodata starts from paddr=0x00039704, size=0x4e54, will be mapped to vaddr=0x3c000000[0m
+V (331) bootloader_flash: after mapping, starting from paddr=0x00030000 and vaddr=0x3c000000, 0x10000 bytes are mapped[0m
+V (346) esp_image: loading segment header 2 at offset 0x3e558[0m
+D (347) bootloader_flash: mmu set block paddr=0x00030000 (was 0xffffffff)[0m
+V (354) esp_image: segment data length 0x1ab8 data starts 0x3e560[0m
+V (360) esp_image: segment 2 map_segment 0 segment_data_offs 0x3e560 load_addr 0x40374000[0m
+[0;32mI (368) esp_image: segment 2: paddr=0003e560 vaddr=40374000 size=01ab8h (  6840) load[0m
+D (377) esp_image: free data page_count 0x00000200[0m
+D (382) bootloader_flash: rodata starts from paddr=0x0003e560, size=0x1ab8, will be mapped to vaddr=0x3c000000[0m
+V (392) bootloader_flash: after mapping, starting from paddr=0x00030000 and vaddr=0x3c000000, 0x20000 bytes are mapped[0m
+V (405) esp_image: loading segment header 3 at offset 0x40018[0m
+D (408) bootloader_flash: mmu set block paddr=0x00040000 (was 0xffffffff)[0m
+V (415) esp_image: segment data length 0x95814 data starts 0x40020[0m
+V (422) esp_image: segment 3 map_segment 1 segment_data_offs 0x40020 load_addr 0x42000020[0m
+[0;32mI (430) esp_image: segment 3: paddr=00040020 vaddr=42000020 size=95814h (612372) map[0m
+D (438) esp_image: free data page_count 0x00000200[0m
+D (443) bootloader_flash: rodata starts from paddr=0x00040020, size=0x95814, will be mapped to vaddr=0x3c000000[0m
+V (453) bootloader_flash: after mapping, starting from paddr=0x00040000 and vaddr=0x3c000000, 0xa0000 bytes are mapped[0m
+V (576) esp_image: loading segment header 4 at offset 0xd5834[0m
+D (576) bootloader_flash: mmu set block paddr=0x000d0000 (was 0xffffffff)[0m
+V (577) esp_image: segment data length 0x13adc data starts 0xd583c[0m
+V (584) esp_image: segment 4 map_segment 0 segment_data_offs 0xd583c load_addr 0x40375ab8[0m
+[0;32mI (592) esp_image: segment 4: paddr=000d583c vaddr=40375ab8 size=13adch ( 80604) load[0m
+D (600) esp_image: free data page_count 0x00000200[0m
+D (605) bootloader_flash: rodata starts from paddr=0x000d583c, size=0x13adc, will be mapped to vaddr=0x3c000000[0m
+V (615) bootloader_flash: after mapping, starting from paddr=0x000d0000 and vaddr=0x3c000000, 0x20000 bytes are mapped[0m
+V (645) esp_image: image start 0x00010000 end of last section 0x000e9318[0m
+D (645) bootloader_flash: mmu set block paddr=0x000e0000 (was 0xffffffff)[0m
+D (648) boot: Calculated hash: aed5dfc65c1a4e8f158768abe141ec662bbabc07fe7714dbd922b0fa8eb99824[0m
+[0;32mI (666) boot: Loaded app from partition at offset 0x10000[0m
+[0;32mI (667) boot: Disabling RNG early entropy source...[0m
+D (668) boot: Mapping segment 0 as DROM[0m
+D (672) boot: Mapping segment 3 as IROM[0m
+D (676) boot: calling set_cache_and_start_app[0m
+D (680) boot: configure drom and irom and start[0m
+V (685) boot: rodata starts from paddr=0x00010020, vaddr=0x3c0a0020, size=0x296dc[0m
+V (692) boot: after mapping rodata, starting from paddr=0x00010000 and vaddr=0x3c0a0000, 0x30000 bytes are mapped[0m
+V (703) boot: text starts from paddr=0x00040020, vaddr=0x42000020, size=0x95814[0m
+V (710) boot: after mapping text, starting from paddr=0x00040000 and vaddr=0x42000000, 0xa0000 bytes are mapped[0m
+D (720) boot: start: 0x40375608[0m
+[0;32mI (735) cpu_start: Multicore app[0m
+V (735) mmap: after coalescing, 1 regions are left[0m
+D (735) cpu_start: Pro cpu up[0m
+D (735) cpu_start: Starting app cpu, entry point is 0x403754e0[0m
+D (0) cpu_start: App cpu up[0m
+V CACHE_ERR: illegal error intr clr & ena mask is: 0x3f
+V CACHE_ERR: core D a75e)s er: r intr clrLK& ena mask is: 0ue1 440429[0m
+V CACHE_ERR: illegal error intr clr & ena mask is: 0x3f
+V CACHE_ERR: core 0 access error intr clr & ena mask is: 0x1f
+[0;32mI (768) cpu_start: Pro cpu start user code[0m
+[0;32mI (771) cpu_start: cpu freq: 160000000 Hz[0m
+[0;32mI (775) cpu_start: Application information:[0m
+[0;32mI (780) cpu_start: Project name:     dpp-enrollee[0m
+[0;32mI (786) cpu_start: App version:      1[0m
+[0;32mI (790) cpu_start: Compile time:     Sep  3 2024 21:09:26[0m
+[0;32mI (796) cpu_start: ELF file SHA256:  639730070...[0m
+[0;32mI (802) cpu_start: ESP-IDF:          v5.2.1[0m
+[0;32mI (806) cpu_start: Min chip rev:     v0.0[0m
+[0;32mI (811) cpu_start: Max chip rev:     v0.99 [0m
+[0;32mI (816) cpu_start: Chip rev:         v0.2[0m
+V (821) memory_layout: reserved range is 0x3c0c96b4 - 0x3c0c96dc[0m
+D (827) memory_layout: Checking 6 reserved memory ranges:[0m
+D (832) memory_layout: Reserved memory range 0x3fc84000 - 0x3fc99600[0m
+D (839) memory_layout: Reserved memory range 0x3fc99600 - 0x3fca26b0[0m
+D (845) memory_layout: Reserved memory range 0x3fceee34 - 0x3fcf0000[0m
+D (851) memory_layout: Reserved memory range 0x40374000 - 0x40389600[0m
+D (858) memory_layout: Reserved memory range 0x600fe000 - 0x600fe010[0m
+D (864) memory_layout: Reserved memory range 0x600fffe8 - 0x60100000[0m
+D (871) memory_layout: Building list of available memory regions:[0m
+V (877) memory_layout: Examining memory region 0x3fc88000 - 0x3fc90000[0m
+V (884) memory_layout: Region 0x3fc88000 - 0x3fc90000 inside of reserved 0x3fc84000 - 0x3fc99600[0m
+V (892) memory_layout: Examining memory region 0x3fc90000 - 0x3fca0000[0m
+V (899) memory_layout: Start of region 0x3fc90000 - 0x3fca0000 overlaps reserved 0x3fc84000 - 0x3fc99600[0m
+V (909) memory_layout: Region 0x3fc99600 - 0x3fca0000 inside of reserved 0x3fc99600 - 0x3fca26b0[0m
+V (917) memory_layout: Examining memory region 0x3fca0000 - 0x3fcb0000[0m
+V (924) memory_layout: Start of region 0x3fca0000 - 0x3fcb0000 overlaps reserved 0x3fc99600 - 0x3fca26b0[0m
+D (934) memory_layout: Available memory region 0x3fca26b0 - 0x3fcb0000[0m
+V (940) memory_layout: Examining memory region 0x3fcb0000 - 0x3fcc0000[0m
+D (947) memory_layout: Available memory region 0x3fcb0000 - 0x3fcc0000[0m
+V (953) memory_layout: Examining memory region 0x3fcc0000 - 0x3fcd0000[0m
+D (960) memory_layout: Available memory region 0x3fcc0000 - 0x3fcd0000[0m
+V (966) memory_layout: Examining memory region 0x3fcd0000 - 0x3fce0000[0m
+D (973) memory_layout: Available memory region 0x3fcd0000 - 0x3fce0000[0m
+V (980) memory_layout: Examining memory region 0x3fce0000 - 0x3fce9710[0m
+D (986) memory_layout: Available memory region 0x3fce0000 - 0x3fce9710[0m
+V (993) memory_layout: Examining memory region 0x3fce9710 - 0x3fcf0000[0m
+V (999) memory_layout: End of region 0x3fce9710 - 0x3fcf0000 overlaps reserved 0x3fceee34 - 0x3fcf0000[0m
+D (1009) memory_layout: Available memory region 0x3fce9710 - 0x3fceee34[0m
+V (1016) memory_layout: Examining memory region 0x3fcf0000 - 0x3fcf8000[0m
+D (1022) memory_layout: Available memory region 0x3fcf0000 - 0x3fcf8000[0m
+V (1029) memory_layout: Examining memory region 0x600fe000 - 0x60100000[0m
+V (1036) memory_layout: Start of region 0x600fe000 - 0x60100000 overlaps reserved 0x600fe000 - 0x600fe010[0m
+V (1045) memory_layout: End of region 0x600fe010 - 0x60100000 overlaps reserved 0x600fffe8 - 0x60100000[0m
+D (1055) memory_layout: Available memory region 0x600fe010 - 0x600fffe8[0m
+[0;32mI (1061) heap_init: Initializing. RAM available for dynamic allocation:[0m
+D (1069) heap_init: New heap initialised at 0x3fca26b0[0m
+[0;32mI (1074) heap_init: At 3FCA26B0 len 00047060 (284 KiB): RAM[0m
+[0;32mI (1080) heap_init: At 3FCE9710 len 00005724 (21 KiB): RAM[0m
+D (1086) heap_init: New heap initialised at 0x3fcf0000[0m
+[0;32mI (1091) heap_init: At 3FCF0000 len 00008000 (32 KiB): DRAM[0m
+D (1098) heap_init: New heap initialised at 0x600fe010[0m
+[0;32mI (1103) heap_init: At 600FE010 len 00001FD8 (7 KiB): RTCRAM[0m
+V (1109) intr_alloc: esp_intr_alloc_intrstatus (cpu 0): checking args[0m
+V (1116) intr_alloc: esp_intr_alloc_intrstatus (cpu 0): Args okay. Resulting flags 0x40E[0m
+D (1124) intr_alloc: Connected src 39 to int 2 (cpu 0)[0m
+V (1130) memspi: raw_chip_id: 1740C8
+[0m
+V (1133) memspi: chip_id: C84017
+[0m
+V (1136) memspi: raw_chip_id: 1740C8
+[0m
+V (1140) memspi: chip_id: C84017
+[0m
+D (1144) spi_flash: trying chip: issi[0m
+D (1147) spi_flash: trying chip: gd[0m
+[0;32mI (1151) spi_flash: detected chip: gd[0m
+[0;32mI (1155) spi_flash: flash io: dio[0m
+[0;33mW (1159) spi_flash: Detected size(8192k) larger than the size in the binary image header(2048k). Using the size in the binary image header.[0m
+D (1173) cpu_start: calling init function: 0x420712a0[0m
+D (1178) cpu_start: calling init function: 0x42070d50[0m
+D (1183) cpu_start: calling init function: 0x42029030[0m
+D (1188) cpu_start: calling init function: 0x42010acc[0m
+D (1193) cpu_start: calling init function: 0x4037c268[0m
+D (1198) cpu_start: calling init function: 0x42002284[0m
+D (D 12(10320)3 )o n onco creor: e:1 [10m[0m
+i
+ng init function: 0x420079ccD (449) cpu_start: calling init function: �M���nc��'�0x0m
+�tV (1216) intr_alloc: esp_intr_alloc_intrstatus (cpu 0): checking args[0m
+V (1222) intr_alloc: esp_intr_alloc_intrstatus (cpu 0): Args okay. Resulting flags 0xC02[0m
+D (1230) intr_alloc: Connected src 59 to int 3 (cpu 0)[0m
+D (1235) cpu_start: calling init function: 0x420052f4 on core: 0[0m
+[0;32mI (1242) sleep: Configure to isolate all GPIO pins in sleep state[0m
+[0;32mI (1248) sleep: Enable automatic switching of GPIO sleep configuration[0m
+D (1255) cpu_start: calling init function: 0x4037a978 on core: 0[0m
+D (1262) esp_apptrace: HW interface 0x00000000[0m
+D (1266) esp_apptrace_uart: esp_apptrace_uart_hw_get - 1[0m
+[0;32mI (1272) esp_apptrace_uart: UART baud rate: 1000000[0m
+V (1277) intr_alloc: esp_intr_alloc_intrstatus (cpu 0): checking args[0m
+V (1283) intr_alloc: esp_intr_alloc_intrstatus (cpu 0): Args okay. Resulting flags 0xE[0m
+D (1291) intr_alloc: Connected src 28 to int 9 (cpu 0)[0m
+[0;32mI (1297) esp_apptrace_uart: Initialized UART on CPU0[0m
+D (1302) cpu_start: calling init function: 0x42003614 on core: 0[0m
+V (1309) intr_alloc: esp_intr_alloc_intrstatus (cpu 0): checking args[0m
+V (1315) intr_alloc: esp_intr_alloc_intrstatus (cpu 0): Args okay. Resulting flags 0x40E[0m
+D (1323) intr_alloc: Connected src 79 to int 12 (cpu 0)[0m
+D (1328) app_start: Starting scheduler on CPU0[0m
+V (1333) intr_alloc: esp_intr_alloc_intrstatus (cpu 0): checking args[0m
+V (1333) intr_alloc: esp_intr_alloc_intrstatus (cpu 0): Args okay. Resulting flags 0x402[0m
+D (1333) intr_alloc: Connected src 57 to int 13 (cpu 0)[0m
+[0;32mI (598) esp_apptrace_uart: Initialized UART on CPU1[0m
+V (1343) intr_alloc: esp_intr_alloc_intrstatus (cpu 1): checking args[0m
+V (1343) intr_alloc: esp_intr_alloc_intrstatus (cpu 1): Args okay. Resulting flags 0x40E[0m
+D (1353) intr_alloc: Connected src 80 to int 2 (cpu 1)[0m
+D (1363) app_start: Starting scheduler on CPU1[0m
+V (1363) intr_alloc: esp_intr_alloc_intrstatus (cpu 1): checking args[0m
+V (1373) intr_alloc: esp_intr_alloc_intrstatus (cpu 1): Args okay. Resulting flags 0x402[0m
+D (1373) intr_alloc: Connected src 58 to int 3 (cpu 1)[0m
+[0;32mI (1333) main_task: Started on CPU0[0m
+D (1393) heap_init: New heap initialised at 0x3fce9710[0m
+V (1393) intr_alloc: esp_intr_alloc_intrstatus (cpu 0): checking args[0m
+V (1403) intr_alloc: esp_intr_alloc_intrstatus (cpu 0): Args okay. Resulting flags 0xE[0m
+D (1403) intr_alloc: Connected src 52 to int 17 (cpu 0)[0m
+[0;32mI (1413) main_task: Calling app_main()[0m
+[0;32mI (1413) wifi dpp-enrollee: ESP_WIFI_MODE_STA[0m
+V (1423) partition: Loading the partition table[0m
+V (1423) mmap: actual_mapped_len is 0x10000[0m
+V (1433) calculated md5: 0x3fcaa8e8   f4 ad 4f 45 38 56 4b 5d  74 35 b6 2c 75 b6 95 24  |..OE8VK]t5.,u..$|[0m
+V (1443) stored md5: 0x3c0d8070   f4 ad 4f 45 38 56 4b 5d  74 35 b6 2c 75 b6 95 24  |..OE8VK]t5.,u..$|[0m
+V (1453) partition: Partition table MD5 verified[0m
+D (1483) esp_netif_lwip: LwIP stack has been initialized[0m
+D (1483) esp_netif_lwip: esp-netif has been successfully initialized[0m
+D (1483) event: running task for loop 0x3fcae0c4[0m
+D (1483) event: created task for loop 0x3fcae0c4[0m
+D (1493) event: created event loop 0x3fcae0c4[0m
+D (1493) esp_netif_lwip: check: remote, if=0x3fcaa920 fn=0x42015d54[0m
+V (1503) esp_netif_objects: esp_netif_add_to_list_unsafe 0x3fcaefec[0m
+D (1503) esp_netif_objects: esp_netif_add_to_list_unsafe netif added successfully (total netifs: 1)[0m
+D (1513) esp_netif_lwip: call api in lwip: ret=0x0, give sem[0m
+[0;32mI (1523) pp: pp rom version: e7ae62f[0m
+[0;32mI (1523) net80211: net80211 rom version: e7ae62f[0m
+D (1533) nvs: nvs_open_from_partition misc 1[0m
+I (1543) wifi:wifi driver task: 3fcb1a0c, prio:23, stack:6656, core=0
+V (1543) esp_adapter: thread sem create: sem=0x3fcb1b64[0m
+V (1543) esp_adapter: thread sem get: sem=0x3fcb1b64[0m
+D (1553) efuse: In EFUSE_BLK1__DATA1_REG is used 8 bits starting with 8 bit[0m
+D (1563) efuse: In EFUSE_BLK1__DATA1_REG is used 8 bits starting with 0 bit[0m
+D (1563) efuse: In EFUSE_BLK1__DATA0_REG is used 8 bits starting with 24 bit[0m
+D (1573) efuse: In EFUSE_BLK1__DATA0_REG is used 8 bits starting with 16 bit[0m
+D (1583) efuse: In EFUSE_BLK1__DATA0_REG is used 8 bits starting with 8 bit[0m
+D (1583) efuse: In EFUSE_BLK1__DATA0_REG is used 8 bits starting with 0 bit[0m
+D (1593) nvs: nvs_open_from_partition nvs.net80211 1[0m
+D (1603) nvs: nvs_get opmode 1[0m
+D (1603) nvs: nvs_get_str_or_blob sta.ssid[0m
+D (1603) nvs: nvs_get sta.authmode 1[0m
+D (1613) nvs: nvs_get_str_or_blob sta.pswd[0m
+D (1613) nvs: nvs_get_str_or_blob sta.pmk[0m
+D (1613) nvs: nvs_get sta.chan 1[0m
+D (1623) nvs: nvs_get auto.conn 1[0m
+D (1623) nvs: nvs_get bssid.set 1[0m
+D (1633) nvs: nvs_get_str_or_blob sta.bssid[0m
+D (1633) nvs: nvs_get sta.lis_intval 2[0m
+D (1633) nvs: nvs_get sta.phym 1[0m
+D (1643) nvs: nvs_get sta.phybw 1[0m
+D (1643) nvs: nvs_get_str_or_blob sta.apsw[0m
+D (1643) nvs: nvs_get_str_or_blob sta.apinfo[0m
+D (1653) nvs: nvs_get sta.scan_method 1[0m
+D (1653) nvs: nvs_get sta.sort_method 1[0m
+D (1663) nvs: nvs_get sta.minrssi 1[0m
+D (1663) nvs: nvs_get sta.minauth 1[0m
+D (1663) nvs: nvs_get sta.pmf_e 1[0m
+D (1673) nvs: nvs_get sta.pmf_r 1[0m
+D (1673) nvs: nvs_get sta.btm_e 1[0m
+D (1673) nvs: nvs_get sta.rrm_e 1[0m
+D (1683) nvs: nvs_get sta.mbo_e 1[0m
+D (1683) nvs: nvs_get_str_or_blob ap.ssid[0m
+D (1683) nvs: nvs_get_str_or_blob ap.passwd[0m
+D (1693) nvs: nvs_get_str_or_blob ap.pmk[0m
+D (1693) nvs: nvs_get ap.chan 1[0m
+D (1703) nvs: nvs_get ap.authmode 1[0m
+D (1703) nvs: nvs_get ap.hidden 1[0m
+D (1703) nvs: nvs_get ap.max.conn 1[0m
+D (1713) nvs: nvs_get bcn.interval 2[0m
+D (1713) nvs: nvs_get ap.phym 1[0m
+D (1713) nvs: nvs_get ap.phybw 1[0m
+D (1723) nvs: nvs_get ap.sndchan 1[0m
+D (1723) nvs: nvs_get ap.pmf_e 1[0m
+D (1723) nvs: nvs_get ap.pmf_r 1[0m
+D (1733) nvs: nvs_get ap.p_cipher 1[0m
+D (1733) nvs: nvs_get lorate 1[0m
+D (1733) nvs: nvs_get_str_or_blob country[0m
+D (1743) nvs: nvs_get ap.ftm_r 1[0m
+D (1743) nvs: nvs_get sta.ft 1[0m
+D (1743) nvs: nvs_get sta.owe 1[0m
+D (1753) nvs: nvs_get sta.trans_d 1[0m
+D (1753) nvs: nvs_get sta.sae_h2e 1[0m
+D (1753) nvs: nvs_get sta.sae_pk_mode 1[0m
+D (1763) nvs: nvs_get sta.bss_retry 1[0m
+D (1763) nvs: nvs_get_str_or_blob sta.owe_data[0m
+D (1773) nvs: nvs_get sta.he_dcm 1[0m
+D (1773) nvs: nvs_get sta.he_dcm_c_tx 1[0m
+D (1773) nvs: nvs_get sta.he_dcm_c_rx 1[0m
+D (1783) nvs: nvs_get sta.he_mcs9_d 1[0m
+D (1783) nvs: nvs_get sta.he_su_b_d 1[0m
+D (1783) nvs: nvs_get sta.he_su_b_f_d 1[0m
+D (1793) nvs: nvs_get sta.he_mu_b_f_d 1[0m
+D (1793) nvs: nvs_get sta.he_cqi_f_d 1[0m
+D (1803) nvs: nvs_get_str_or_blob sta.sae_h2e_id[0m
+D (1803) nvs: nvs_get ap.sae_h2e 1[0m
+D (1803) nvs: nvs_get_str_or_blob ap.pmk_info[0m
+D (1813) nvs: nvs_get nan.phym 1[0m
+D (1813) nvs: nvs_set ap.sndchan 1 1[0m
+I (1823) wifi:wifi firmware version: a9f5b59
+I (1823) wifi:wifi certification version: v7.0
+I (1823) wifi:config NVS flash: enabled
+I (1833) wifi:config nano formating: disabled
+I (1833) wifi:Init data frame dynamic rx buffer num: 32
+I (1843) wifi:Init static rx mgmt buffer num: 5
+I (1843) wifi:Init management short buffer num: 32
+I (1853) wifi:Init dynamic tx buffer num: 32
+I (1853) wifi:Init static tx FG buffer num: 2
+I (1853) wifi:Init static rx buffer size: 1600
+I (1863) wifi:Init static rx buffer num: 10
+I (1863) wifi:Init dynamic rx buffer num: 32
+V (1873) wifi:hint=255, act_dur=<0,120>, pas_dur=360, nchans=14 history_num=0
+V (1873) esp_adapter: thread sem get: sem=0x3fcb1b64[0m
+[0;32mI (1883) wifi_init: rx ba win: 6[0m
+[0;32mI (1883) wifi_init: tcpip mbox: 32[0m
+[0;32mI (1893) wifi_init: udp mbox: 6[0m
+[0;32mI (1893) wifi_init: tcp mbox: 6[0m
+[0;32mI (1893) wifi_init: tcp tx win: 5760[0m
+[0;32mI (1903) wifi_init: tcp rx win: 5760[0m
+[0;32mI (1903) wifi_init: tcp mss: 1440[0m
+[0;32mI (1913) wifi_init: WiFi IRAM OP enabled[0m
+[0;32mI (1913) wifi_init: WiFi RX IRAM OP enabled[0m
+V (1913) esp_adapter: thread sem get: sem=0x3fcb1b64[0m
+D (1923) nvs: nvs_get opmode 1[0m
+D (1983) gdma: new group (0) at 0x3fcba32c[0m
+D (1983) gdma: new pair (0,0) at 0x3fcba038[0m
+D (1983) gdma: new tx channel (0,0) at 0x3fcba188[0m
+D (1983) gdma: new rx channel (0,0) at 0x3fcba3b4[0m
+D (1993) gdma: tx channel (0,0), (1:16) bytes aligned, burst enabled[0m
+D (1993) gdma: rx channel (0,0), (1:16) bytes aligned, burst disabled[0m
+[0;32mI (2003) wifi dpp-enrollee: Scan below QR Code to configure the enrollee:[0m
+[0;32mI (2013) QRCODE: Encoding below text with ECC LVL 0 & QR Code Version 10[0m
+[0;32mI (2013) QRCODE: DPP:C:81/6;M:84:fc:e6:7b:73:b8;K:MDkwEwYHKoZIzj0CAQYIKoZIzj0DAQcDIgAC/+4CJ2BFmZEX6BDOPJkBo6K/IXQA4H5Z1DAljizDDaA=;;[0m
+                                              
+  █▀▀▀▀▀█ ▄▄   █▄▄▀█▀ ▀ ▀▀   ▄▀ ▄▀▄ █▀▀▀▀▀█   
+  █ ███ █ ▄▄▄█ ▀▄ ▄▀▀  ▀▄ ▄ █ ▄ ▀▀▄ █ ███ █   
+  █ ▀▀▀ █ ▄█▄ ▄█ █▄▄█ ▄▀▄▀▄▄ █▀██ █ █ ▀▀▀ █   
+  ▀▀▀▀▀▀▀ ▀▄▀ ▀ ▀▄▀ ▀▄▀▄█ ▀ ▀▄▀ █▄█ ▀▀▀▀▀▀▀   
+  ██▀██ ▀▀▀▀▄▀▄▀▄▀█ ▄█▀▀█▀▀▀▄ ▀█▄█▄▀▄▀▄▀ █▄   
+  ▀ █ ▀ ▀▄ ▀ ▀  ▄█▀ ▀▄ █▄▄  ▄▀▀▀█▄▄ ▀▄▄  ▀▄   
+   ▄▀ █▀▀▄▄   ▀ ▄▄▄ ▀█▀ █▄▀█▄██▀▄ ▄  ▄▄▀█ ▀   
+  ▄    ▀▀▀▀ ▀█▀   ▄ ▀▄▀█▄ ▄  █▀   ▄▀█▄▄▀▀▄    
+   ▄▄▀▀█▀██▀ █▀▄▀▄▄▄ █▄▀▀▄ ▀▄ ▀█▀▄▄▄ ▀▄▀██▄   
+  ▀▀█ ▀█▀▀▄ ▀ ▄█▀▀ █▄▄ ▄ ▄▄ ▀▀█▀▀▄ ███ ▄▀▀▄   
+  ▄▀█  ▄▀▀▄  ▀▄ ▀▄▀ ▄█▀▀▀▀▀▄▀█▄ ▄▀▄▄ ▄█▄ ▀    
+  █▄▄ ██▀▀█▀▄ ▄ ▀█▀ ▀ ██  ▀▀▄▀█▀▄▄  ▀ ▄▄ ▄    
+  █ ▀▀▀█▀  ▀  ▀ ▀██  ███▀▄▀▄▀ ▀▀▀▄▀▀▄ ▄  ▄    
+  ▄▀▄ █▄▀ █ ▀ ▀ ▄▀█ ▀ ▀█▀ ▀  ▀ ▀█ ▄  ▀█▀▀     
+  █▀▀▀ ▀▀▀▀▀  ▀ ▄▄▄▄▀█▀▀▀ ▀█▄  █▄ ▄  ▄█▀▀█    
+  █ ▀▀▄▄▀█ ▄ █▀ ▄ ▄ ▀ ▀▄▄ ▄▀▄▀▀▀█▄▄██ ▄█▀ ▄   
+  ▀ ▀▀  ▀▀▄▄▄▀▀▄█ ▄▄▄ ▄▄▀ ▀▀▄ ▀█▀▄█▀▀▀█ ▄█    
+  █▀▀▀▀▀█ ▀ ▀▄▄█▀▀▀█▄▄ █▀   █▀ ▀ ▀█ ▀ █ ▀ ▄   
+  █ ███ █ █▀  ▄ ▀▄▀▄▄▀▄ ▀█▄▄██▄▀▀ ▀█▀█▀▀█ ▄   
+  █ ▀▀▀ █ ██▀ ▄ ▄█▀ ▀ ▀▄█▄█▀ ▀▄▀ ▄█▄█ █ ▀▄    
+  ▀▀▀▀▀▀▀ ▀   ▀▀▀▀    ▀▀▀▀▀ ▀▀ ▀   ▀   ▀▀     
+                                              
+
+V (2323) esp_adapter: thread sem get: sem=0x3fcb1b64[0m
+[0;32mI (2333) phy_init: phy_version 640,cd64a1a,Jan 24 2024,17:28:12[0m
+D (2333) phy_init: loading PHY init data from application binary[0m
+D (2343) nvs: nvs_open_from_partition phy 0[0m
+D (2343) nvs: nvs_get cal_version 4[0m
+V (2353) phy_init: phy_get_rf_cal_version: 640[0m
+D (2353) nvs: nvs_get_str_or_blob cal_mac[0m
+D (2363) efuse: In EFUSE_BLK1__DATA1_REG is used 8 bits starting with 8 bit[0m
+D (2363) efuse: In EFUSE_BLK1__DATA1_REG is used 8 bits starting with 0 bit[0m
+D (2373) efuse: In EFUSE_BLK1__DATA0_REG is used 8 bits starting with 24 bit[0m
+D (2383) efuse: In EFUSE_BLK1__DATA0_REG is used 8 bits starting with 16 bit[0m
+D (2383) efuse: In EFUSE_BLK1__DATA0_REG is used 8 bits starting with 8 bit[0m
+D (2393) efuse: In EFUSE_BLK1__DATA0_REG is used 8 bits starting with 0 bit[0m
+D (2403) nvs: nvs_get_str_or_blob cal_data[0m
+D (2413) nvs: nvs_close 3[0m
+D (2413) efuse: In EFUSE_BLK1__DATA1_REG is used 8 bits starting with 8 bit[0m
+D (2413) efuse: In EFUSE_BLK1__DATA1_REG is used 8 bits starting with 0 bit[0m
+D (2423) efuse: In EFUSE_BLK1__DATA0_REG is used 8 bits starting with 24 bit[0m
+D (2423) efuse: In EFUSE_BLK1__DATA0_REG is used 8 bits starting with 16 bit[0m
+D (2433) efuse: In EFUSE_BLK1__DATA0_REG is used 8 bits starting with 8 bit[0m
+D (2443) efuse: In EFUSE_BLK1__DATA0_REG is used 8 bits starting with 0 bit[0m
+D (2463) temperature_sensor: range changed, change to index 2[0m
+V (2483) wifi:ht20 freq=2412, chan=1
+D (2483) wifi:filter: set rx policy=0
+I (2483) wifi:mode : sta (84:fc:e6:7b:73:b8)
+I (2483) wifi:enable tsf
+D (2483) wifi:filter: set rx policy=1
+D (2483) wifi:connect status 0 -> 0
+D (2493) event: running post WIFI_EVENT:40 with handler 0x4200a610 and context 0x3fcaf350 on loop 0x3fcae0c4[0m
+D (2503) event: running post WIFI_EVENT:2 with handler 0x42029280 and context 0x3fcaf1e8 on loop 0x3fcae0c4[0m
+D (2513) wifi_init_default: wifi_start esp-netif:0x3fcaefec event-id2[0m
+D (2513) wifi_init_default: WIFI mac address: 84 fc e6 7b 73 b8[0m
+V (2523) esp_adapter: thread sem create: sem=0x3fcb9ba8[0m
+V (2523) esp_adapter: thread sem get: sem=0x3fcb9ba8[0m
+D (2533) esp_netif_lwip: check: remote, if=0x3fcaefec fn=0x42015740[0m
+D (2533) esp_netif_lwip: call api in lwip: ret=0x0, give sem[0m
+D (2543) esp_netif_handlers: esp_netif action has started with netif0x3fcaefec from event_id=2[0m
+D (2553) esp_netif_lwip: check: remote, if=0x3fcaefec fn=0x4201600c[0m
+D (2563) esp_netif_lwip: esp_netif_start_api 0x3fcaefec[0m
+D (2563) esp_netif_lwip: esp_netif_get_hostname esp_netif:0x3fcaefec[0m
+D (2573) esp_netif_lwip: check: local, if=0x3fcaefec fn=0x420167b0[0m
+D (2573) esp_netif_lwip: esp_netif_update_default_netif_lwip 0x3fcaefec[0m
+V (2583) esp_netif_lwip: esp_netif_is_netif_up esp_netif:0x3fcaefec[0m
+D (2593) esp_netif_lwip: call api in lwip: ret=0x0, give sem[0m
+D (2593) event: running post WIFI_EVENT:2 with handler 0x4200a610 and context 0x3fcaf350 on loop 0x3fcae0c4[0m
+[0;32mI (2603) wifi dpp-enrollee: Started listening for DPP Authentication[0m
+V (2603) esp_adapter: thread sem create: sem=0x3fcb9c58[0m
+V (2613) esp_adapter: thread sem get: sem=0x3fcb9c58[0m
+V (2623) wifi:change: chan<6,0>, dur<0,500>
+V (2623) wifi:ht20 freq=2437, chan=6
+V (2633) wifi:enter start op, arg=0x42017358
+V (2633) wifi:start max timer
+V (3133) wifi:back home chan=<1,0>, current chan=<6,0>
+V (3133) wifi:ht20 freq=2412, chan=1
+D (3133) event: running post WIFI_EVENT:20 with handler 0x4200a610 and context 0x3fcaf350 on loop 0x3fcae0c4[0m
+D (3143) event: running post WIFI_EVENT:20 with handler 0x42017540 and context 0x3fcb9948 on loop 0x3fcae0c4[0m
+V (3153) esp_adapter: thread sem get: sem=0x3fcb9c58[0m
+V (3163) wifi:change: chan<6,0>, dur<0,500>
+V (3163) wifi:ht20 freq=2437, chan=6
+V (3163) wifi:enter start op, arg=0x42017358
+V (3173) wifi:start max timer
+V (3673) wifi:back home chan=<1,0>, current chan=<6,0>
+V (3673) wifi:ht20 freq=2412, chan=1
+D (3673) event: running post WIFI_EVENT:20 with handler 0x4200a610 and context 0x3fcaf350 on loop 0x3fcae0c4[0m
+D (3683) event: running post WIFI_EVENT:20 with handler 0x42017540 and context 0x3fcb9948 on loop 0x3fcae0c4[0m
+V (3693) esp_adapter: thread sem get: sem=0x3fcb9c58[0m
+V (3693) wifi:change: chan<6,0>, dur<0,500>
+V (3703) wifi:ht20 freq=2437, chan=6
+V (3703) wifi:enter start op, arg=0x42017358
+V (3703) wifi:start max timer
+V (4213) wifi:back home chan=<1,0>, current chan=<6,0>
+V (4213) wifi:ht20 freq=2412, chan=1
+D (4213) event: running post WIFI_EVENT:20 with handler 0x4200a610 and context 0x3fcaf350 on loop 0x3fcae0c4[0m
+D (4213) event: running post WIFI_EVENT:20 with handler 0x42017540 and context 0x3fcb9948 on loop 0x3fcae0c4[0m
+V (4223) esp_adapter: thread sem get: sem=0x3fcb9c58[0m
+V (4233) wifi:change: chan<6,0>, dur<0,500>
+V (4233) wifi:ht20 freq=2437, chan=6
+V (4233) wifi:enter start op, arg=0x42017358
+V (4243) wifi:start max timer
+V (4743) wifi:back home chan=<1,0>, current chan=<6,0>
+V (4743) wifi:ht20 freq=2412, chan=1
+D (4743) event: running post WIFI_EVENT:20 with handler 0x4200a610 and context 0x3fcaf350 on loop 0x3fcae0c4[0m
+D (4753) event: running post WIFI_EVENT:20 with handler 0x42017540 and context 0x3fcb9948 on loop 0x3fcae0c4[0m
+V (4763) esp_adapter: thread sem get: sem=0x3fcb9c58[0m
+V (4763) wifi:change: chan<6,0>, dur<0,500>
+V (4773) wifi:ht20 freq=2437, chan=6
+V (4773) wifi:enter start op, arg=0x42017358
+V (4773) wifi:start max timer
+V (5283) wifi:back home chan=<1,0>, current chan=<6,0>
+V (5283) wifi:ht20 freq=2412, chan=1
+D (5283) event: running post WIFI_EVENT:20 with handler 0x4200a610 and context 0x3fcaf350 on loop 0x3fcae0c4[0m
+D (5283) event: running post WIFI_EVENT:20 with handler 0x42017540 and context 0x3fcb9948 on loop 0x3fcae0c4[0m
+V (5293) esp_adapter: thread sem get: sem=0x3fcb9c58[0m
+V (5303) wifi:change: chan<6,0>, dur<0,500>
+V (5303) wifi:ht20 freq=2437, chan=6
+V (5313) wifi:enter start op, arg=0x42017358
+V (5313) wifi:start max timer
+V (5813) wifi:back home chan=<1,0>, current chan=<6,0>
+V (5813) wifi:ht20 freq=2412, chan=1
+D (5813) event: running post WIFI_EVENT:20 with handler 0x4200a610 and context 0x3fcaf350 on loop 0x3fcae0c4[0m
+D (5823) event: running post WIFI_EVENT:20 with handler 0x42017540 and context 0x3fcb9948 on loop 0x3fcae0c4[0m
+V (5833) esp_adapter: thread sem get: sem=0x3fcb9c58[0m
+V (5843) wifi:change: chan<6,0>, dur<0,500>
+V (5843) wifi:ht20 freq=2437, chan=6
+V (5843) wifi:enter start op, arg=0x42017358
+V (5853) wifi:start max timer
+V (6353) wifi:back home chan=<1,0>, current chan=<6,0>
+V (6353) wifi:ht20 freq=2412, chan=1
+D (6353) event: running post WIFI_EVENT:20 with handler 0x4200a610 and context 0x3fcaf350 on loop 0x3fcae0c4[0m
+D (6363) event: running post WIFI_EVENT:20 with handler 0x42017540 and context 0x3fcb9948 on loop 0x3fcae0c4[0m
+V (6373) esp_adapter: thread sem get: sem=0x3fcb9c58[0m
+V (6373) wifi:change: chan<6,0>, dur<0,500>
+V (6383) wifi:ht20 freq=2437, chan=6
+V (6383) wifi:enter start op, arg=0x42017358
+V (6383) wifi:start max timer
+V (6893) wifi:back home chan=<1,0>, current chan=<6,0>
+V (6893) wifi:ht20 freq=2412, chan=1
+D (6893) event: running post WIFI_EVENT:20 with handler 0x4200a610 and context 0x3fcaf350 on loop 0x3fcae0c4[0m
+D (6893) event: running post WIFI_EVENT:20 with handler 0x42017540 and context 0x3fcb9948 on loop 0x3fcae0c4[0m
+V (6903) esp_adapter: thread sem get: sem=0x3fcb9c58[0m
+V (6913) wifi:change: chan<6,0>, dur<0,500>
+V (6913) wifi:ht20 freq=2437, chan=6
+V (6923) wifi:enter start op, arg=0x42017358
+V (6923) wifi:start max timer
+V (7113) esp_adapter: thread sem get: sem=0x3fcb9c58[0m
+V (7113) wifi:back home chan=<1,0>, current chan=<6,0>
+V (7113) wifi:ht20 freq=2412, chan=1
+V (7123) wifi:back home chan=<1,0>, current chan=<1,0>
+D (7123) event: runV (7123) intr_alloc: esp_intr_alloc_intrstatus (cpu 1): checking args[0m
+V (7133) intr_alloc: esp_intr_alloc_intrstatus (cpu 1): Args okay. Resulting flags 0xE[0m
+nD (7143) intr_alloc: Connected src 76 to int 4 (cpu 1)[0m
+ing post WIFI_EVV (7143) intr_alloc: esp_intr_alloc_intrstatus (cpu 1): checking args[0m
+V (7153) intr_alloc: esp_intr_alloc_intrstatus (cpu 1): Args okay. Resulting flags 0xE[0m
+D (7163) intr_alloc: Connected src 77 to int 9 (cpu 1)[0m
+ENT:20 with handler 0x4200a610 and context 0x3fcaf350 on loop 0x3fcae0c4[0m
+D (7173) event: running post WIFI_EVENT:20 with handler 0x42017540 and context 0x3fcb9948 on loop 0x3fcae0c4[0m
+V (7533) esp_adapter: thread sem get: sem=0x3fcb9c58[0m
+V (7533) wifi:change: chan<6,0>, dur<0,500>
+V (7533) wifi:ht20 freq=2437, chan=6
+V (7533) wifi:enter start op, arg=0x3fcbb738
+V (7543) wifi:start max timer
+D (7543) event: running post WIFI_EVENT:19 with handler 0x4200a610 and context 0x3fcaf350 on loop 0x3fcae0c4[0m
+D (7553) event: running post WIFI_EVENT:19 with handler 0x42017540 and context 0x3fcb9918 on loop 0x3fcae0c4[0m
+V (8043) wifi:back home chan=<1,0>, current chan=<6,0>
+V (8043) wifi:ht20 freq=2412, chan=1
+[0;32mI (8543) wifi dpp-enrollee: DPP Auth failed (Reason: ESP_ERR_DPP_AUTH_TIMEOUT), retry...[0m
+V (8543) esp_adapter: thread sem get: sem=0x3fcb9c58[0m
+V (8543) wifi:change: chan<6,0>, dur<0,500>
+V (8553) wifi:ht20 freq=2437, chan=6
+V (8553) wifi:enter start op, arg=0x42017358
+V (8553) wifi:start max timer
+V (8753) esp_adapter: thread sem get: sem=0x3fcb9c58[0m
+V (8753) wifi:back home chan=<1,0>, current chan=<6,0>
+V (8753) wifi:ht20 freq=2412, chan=1
+V (8753) wifi:back home chan=<1,0>, current chan=<1,0>
+[0;32mI (8753) wifi dpp-enrollee: DPP Auth failed (Reason: ESP_ERR_DPP_FAILURE), retry...[0m
+D (8753) event: running post WIFI_EVENT:20 with handler 0x4200a610 and context 0x3fcaf350 on loop 0x3fcae0c4[0m
+V (8763) esp_adapter: thread sem get: sem=0x3fcb9c58[0m
+D (8773) event: running post WIFI_EVENT:20 with handler 0x42017540 and context 0x3fcb9948 on loop 0x3fcae0c4[0m
+V (8783) wifi:change: chan<6,0>, dur<0,500>
+V (8793) wifi:ht20 freq=2437, chan=6
+V (8793) wifi:enter start op, arg=0x42017358
+V (8803) wifi:start max timer
+V (9303) wifi:back home chan=<1,0>, current chan=<6,0>
+V (9303) wifi:ht20 freq=2412, chan=1
+D (9303) event: running post WIFI_EVENT:20 with handler 0x4200a610 and context 0x3fcaf350 on loop 0x3fcae0c4[0m
+D (9313) event: running post WIFI_EVENT:20 with handler 0x42017540 and context 0x3fcb9948 on loop 0x3fcae0c4[0m
+V (9323) esp_adapter: thread sem get: sem=0x3fcb9c58[0m
+V (9323) wifi:change: chan<6,0>, dur<0,500>
+V (9333) wifi:ht20 freq=2437, chan=6
+V (9333) wifi:enter start op, arg=0x42017358
+V (9333) wifi:start max timer
+V (9843) wifi:back home chan=<1,0>, current chan=<6,0>
+V (9843) wifi:ht20 freq=2412, chan=1
+D (9843) event: running post WIFI_EVENT:20 with handler 0x4200a610 and context 0x3fcaf350 on loop 0x3fcae0c4[0m
+D (9843) event: running post WIFI_EVENT:20 with handler 0x42017540 and context 0x3fcb9948 on loop 0x3fcae0c4[0m
+V (9853) esp_adapter: thread sem get: sem=0x3fcb9c58[0m
+V (9863) wifi:change: chan<6,0>, dur<0,500>
+V (9863) wifi:ht20 freq=2437, chan=6
+V (9873) wifi:enter start op, arg=0x42017358
+V (9873) wifi:start max timer
+V (10373) wifi:back home chan=<1,0>, current chan=<6,0>
+V (10373) wifi:ht20 freq=2412, chan=1
+D (10373) event: running post WIFI_EVENT:20 with handler 0x4200a610 and context 0x3fcaf350 on loop 0x3fcae0c4[0m
+D (10383) event: running post WIFI_EVENT:20 with handler 0x42017540 and context 0x3fcb9948 on loop 0x3fcae0c4[0m
+V (10393) esp_adapter: thread sem get: sem=0x3fcb9c58[0m
+V (10393) wifi:change: chan<6,0>, dur<0,500>
+V (10403) wifi:ht20 freq=2437, chan=6
+V (10403) wifi:enter start op, arg=0x42017358
+V (10413) wifi:start max timer
+V (10913) wifi:back home chan=<1,0>, current chan=<6,0>
+V (10913) wifi:ht20 freq=2412, chan=1
+D (10913) event: running post WIFI_EVENT:20 with handler 0x4200a610 and context 0x3fcaf350 on loop 0x3fcae0c4[0m
+D (10923) event: running post WIFI_EVENT:20 with handler 0x42017540 and context 0x3fcb9948 on loop 0x3fcae0c4[0m
+V (10933) esp_adapter: thread sem get: sem=0x3fcb9c58[0m
+V (10933) wifi:change: chan<6,0>, dur<0,500>
+V (10943) wifi:ht20 freq=2437, chan=6
+V (10943) wifi:enter start op, arg=0x42017358
+V (10943) wifi:start max timer
+V (11453) wifi:back home chan=<1,0>, current chan=<6,0>
+V (11453) wifi:ht20 freq=2412, chan=1
+D (11453) event: running post WIFI_EVENT:20 with handler 0x4200a610 and context 0x3fcaf350 on loop 0x3fcae0c4[0m
+D (11453) event: running post WIFI_EVENT:20 with handler 0x42017540 and context 0x3fcb9948 on loop 0x3fcae0c4[0m
+V (11463) esp_adapter: thread sem get: sem=0x3fcb9c58[0m
+V (11473) wifi:change: chan<6,0>, dur<0,500>
+V (11473) wifi:ht20 freq=2437, chan=6
+V (11483) wifi:enter start op, arg=0x42017358
+V (11483) wifi:start max timer
+V (11983) wifi:back home chan=<1,0>, current chan=<6,0>
+V (11983) wifi:ht20 freq=2412, chan=1
+D (11983) event: running post WIFI_EVENT:20 with handler 0x4200a610 and context 0x3fcaf350 on loop 0x3fcae0c4[0m
+D (11993) event: running post WIFI_EVENT:20 with handler 0x42017540 and context 0x3fcb9948 on loop 0x3fcae0c4[0m
+V (12003) esp_adapter: thread sem get: sem=0x3fcb9c58[0m
+V (12013) wifi:change: chan<6,0>, dur<0,500>
+V (12013) wifi:ht20 freq=2437, chan=6
+V (12013) wifi:enter start op, arg=0x42017358
+V (12023) wifi:start max timer
+V (12523) wifi:back home chan=<1,0>, current chan=<6,0>
+V (12523) wifi:ht20 freq=2412, chan=1
+D (12523) event: running post WIFI_EVENT:20 with handler 0x4200a610 and context 0x3fcaf350 on loop 0x3fcae0c4[0m
+D (12533) event: running post WIFI_EVENT:20 with handler 0x42017540 and context 0x3fcb9948 on loop 0x3fcae0c4[0m
+V (12543) esp_adapter: thread sem get: sem=0x3fcb9c58[0m
+V (12543) wifi:change: chan<6,0>, dur<0,500>
+V (12553) wifi:ht20 freq=2437, chan=6
+V (12553) wifi:enter start op, arg=0x42017358
+V (12553) wifi:start max timer
+V (13063) wifi:back home chan=<1,0>, current chan=<6,0>
+V (13063) wifi:ht20 freq=2412, chan=1
+D (13063) event: running post WIFI_EVENT:20 with handler 0x4200a610 and context 0x3fcaf350 on loop 0x3fcae0c4[0m
+D (13063) event: running post WIFI_EVENT:20 with handler 0x42017540 and context 0x3fcb9948 on loop 0x3fcae0c4[0m
+V (13073) esp_adapter: thread sem get: sem=0x3fcb9c58[0m
+V (13083) wifi:change: chan<6,0>, dur<0,500>
+V (13083) wifi:ht20 freq=2437, chan=6
+V (13093) wifi:enter start op, arg=0x42017358
+V (13093) wifi:start max timer
+V (13593) wifi:back home chan=<1,0>, current chan=<6,0>
+V (13593) wifi:ht20 freq=2412, chan=1
+D (13593) event: running post WIFI_EVENT:20 with handler 0x4200a610 and context 0x3fcaf350 on loop 0x3fcae0c4[0m
+D (13603) event: running post WIFI_EVENT:20 with handler 0x42017540 and context 0x3fcb9948 on loop 0x3fcae0c4[0m
+V (13613) esp_adapter: thread sem get: sem=0x3fcb9c58[0m
+V (13623) wifi:change: chan<6,0>, dur<0,500>
+V (13623) wifi:ht20 freq=2437, chan=6
+V (13623) wifi:enter start op, arg=0x42017358
+V (13633) wifi:start max timer
+V (14133) wifi:back home chan=<1,0>, current chan=<6,0>
+V (14133) wifi:ht20 freq=2412, chan=1
+D (14133) event: running post WIFI_EVENT:20 with handler 0x4200a610 and context 0x3fcaf350 on loop 0x3fcae0c4[0m
+D (14143) event: running post WIFI_EVENT:20 with handler 0x42017540 and context 0x3fcb9948 on loop 0x3fcae0c4[0m
+V (14153) esp_adapter: thread sem get: sem=0x3fcb9c58[0m
+V (14153) wifi:change: chan<6,0>, dur<0,500>
+V (14163) wifi:ht20 freq=2437, chan=6
+V (14163) wifi:enter start op, arg=0x42017358
+V (14163) wifi:start max timer
+V (14673) wifi:back home chan=<1,0>, current chan=<6,0>
+V (14673) wifi:ht20 freq=2412, chan=1
+D (14673) event: running post WIFI_EVENT:20 with handler 0x4200a610 and context 0x3fcaf350 on loop 0x3fcae0c4[0m
+D (14683) event: running post WIFI_EVENT:20 with handler 0x42017540 and context 0x3fcb9948 on loop 0x3fcae0c4[0m
+V (14693) esp_adapter: thread sem get: sem=0x3fcb9c58[0m
+V (14693) wifi:change: chan<6,0>, dur<0,500>
+V (14693) wifi:ht20 freq=2437, chan=6
+V (14703) wifi:enter start op, arg=0x42017358
+V (14703) wifi:start max timer
+V (15203) wifi:back home chan=<1,0>, current chan=<6,0>
+V (15203) wifi:ht20 freq=2412, chan=1
+D (15213) event: running post WIFI_EVENT:20 with handler 0x4200a610 and context 0x3fcaf350 on loop 0x3fcae0c4[0m
+D (15213) event: running post WIFI_EVENT:20 with handler 0x42017540 and context 0x3fcb9948 on loop 0x3fcae0c4[0m
+V (15223) esp_adapter: thread sem get: sem=0x3fcb9c58[0m
+V (15233) wifi:change: chan<6,0>, dur<0,500>
+V (15233) wifi:ht20 freq=2437, chan=6
+V (15233) wifi:enter start op, arg=0x42017358
+V (15243) wifi:start max timer
+V (15743) wifi:back home chan=<1,0>, current chan=<6,0>
+V (15743) wifi:ht20 freq=2412, chan=1
+D (15743) event: running post WIFI_EVENT:20 with handler 0x4200a610 and context 0x3fcaf350 on loop 0x3fcae0c4[0m
+D (15753) event: running post WIFI_EVENT:20 with handler 0x42017540 and context 0x3fcb9948 on loop 0x3fcae0c4[0m
+V (15763) esp_adapter: thread sem get: sem=0x3fcb9c58[0m
+V (15763) wifi:change: chan<6,0>, dur<0,500>
+V (15773) wifi:ht20 freq=2437, chan=6
+V (15773) wifi:enter start op, arg=0x42017358
+V (15783) wifi:start max timer
+V (16283) wifi:back home chan=<1,0>, current chan=<6,0>
+V (16283) wifi:ht20 freq=2412, chan=1
+D (16283) event: running post WIFI_EVENT:20 with handler 0x4200a610 and context 0x3fcaf350 on loop 0x3fcae0c4[0m
+D (16293) event: running post WIFI_EVENT:20 with handler 0x42017540 and context 0x3fcb9948 on loop 0x3fcae0c4[0m
+V (16303) esp_adapter: thread sem get: sem=0x3fcb9c58[0m
+V (16303) wifi:change: chan<6,0>, dur<0,500>
+V (16303) wifi:ht20 freq=2437, chan=6
+V (16313) wifi:enter start op, arg=0x42017358
+V (16313) wifi:start max timer
+V (16823) wifi:back home chan=<1,0>, current chan=<6,0>
+V (16823) wifi:ht20 freq=2412, chan=1
+D (16823) event: running post WIFI_EVENT:20 with handler 0x4200a610 and context 0x3fcaf350 on loop 0x3fcae0c4[0m
+D (16823) event: running post WIFI_EVENT:20 with handler 0x42017540 and context 0x3fcb9948 on loop 0x3fcae0c4[0m
+V (16833) esp_adapter: thread sem get: sem=0x3fcb9c58[0m
+V (16843) wifi:change: chan<6,0>, dur<0,500>
+V (16843) wifi:ht20 freq=2437, chan=6
+V (16853) wifi:enter start op, arg=0x42017358
+V (16853) wifi:start max timer
+V (17353) wifi:back home chan=<1,0>, current chan=<6,0>
+V (17353) wifi:ht20 freq=2412, chan=1
+D (17353) event: running post WIFI_EVENT:20 with handler 0x4200a610 and context 0x3fcaf350 on loop 0x3fcae0c4[0m
+D (17363) event: running post WIFI_EVENT:20 with handler 0x42017540 and context 0x3fcb9948 on loop 0x3fcae0c4[0m
+V (17373) esp_adapter: thread sem get: sem=0x3fcb9c58[0m
+V (17383) wifi:change: chan<6,0>, dur<0,500>
+V (17383) wifi:ht20 freq=2437, chan=6
+V (17383) wifi:enter start op, arg=0x42017358
+V (17393) wifi:start max timer
+V (17893) wifi:back home chan=<1,0>, current chan=<6,0>
+V (17893) wifi:ht20 freq=2412, chan=1
+D (17893) event: running post WIFI_EVENT:20 with handler 0x4200a610 and context 0x3fcaf350 on loop 0x3fcae0c4[0m
+D (17903) event: running post WIFI_EVENT:20 with handler 0x42017540 and context 0x3fcb9948 on loop 0x3fcae0c4[0m
+V (17913) esp_adapter: thread sem get: sem=0x3fcb9c58[0m
+V (17913) wifi:change: chan<6,0>, dur<0,500>
+V (17923) wifi:ht20 freq=2437, chan=6
+V (17923) wifi:enter start op, arg=0x42017358
+V (17923) wifi:start max timer
+V (18433) wifi:back home chan=<1,0>, current chan=<6,0>
+V (18433) wifi:ht20 freq=2412, chan=1
+D (18433) event: running post WIFI_EVENT:20 with handler 0x4200a610 and context 0x3fcaf350 on loop 0x3fcae0c4[0m
+D (18433) event: running post WIFI_EVENT:20 with handler 0x42017540 and context 0x3fcb9948 on loop 0x3fcae0c4[0m
+V (18443) esp_adapter: thread sem get: sem=0x3fcb9c58[0m
+V (18453) wifi:change: chan<6,0>, dur<0,500>
+V (18453) wifi:ht20 freq=2437, chan=6
+V (18463) wifi:enter start op, arg=0x42017358
+V (18463) wifi:start max timer
+V (18963) wifi:back home chan=<1,0>, current chan=<6,0>
+V (18963) wifi:ht20 freq=2412, chan=1
+D (18963) event: running post WIFI_EVENT:20 with handler 0x4200a610 and context 0x3fcaf350 on loop 0x3fcae0c4[0m
+D (18973) event: running post WIFI_EVENT:20 with handler 0x42017540 and context 0x3fcb9948 on loop 0x3fcae0c4[0m
+V (18983) esp_adapter: thread sem get: sem=0x3fcb9c58[0m
+V (18993) wifi:change: chan<6,0>, dur<0,500>
+V (18993) wifi:ht20 freq=2437, chan=6
+V (18993) wifi:enter start op, arg=0x42017358
+V (19003) wifi:start max timer
+V (19503) wifi:back home chan=<1,0>, current chan=<6,0>
+V (19503) wifi:ht20 freq=2412, chan=1
+D (19503) event: running post WIFI_EVENT:20 with handler 0x4200a610 and context 0x3fcaf350 on loop 0x3fcae0c4[0m
+D (19513) event: running post WIFI_EVENT:20 with handler 0x42017540 and context 0x3fcb9948 on loop 0x3fcae0c4[0m
+V (19523) esp_adapter: thread sem get: sem=0x3fcb9c58[0m
+V (19523) wifi:change: chan<6,0>, dur<0,500>
+V (19533) wifi:ht20 freq=2437, chan=6
+V (19533) wifi:enter start op, arg=0x42017358
+V (19533) wifi:start max timer
+V (20043) wifi:back home chan=<1,0>, current chan=<6,0>
+V (20043) wifi:ht20 freq=2412, chan=1
+D (20043) event: running post WIFI_EVENT:20 with handler 0x4200a610 and context 0x3fcaf350 on loop 0x3fcae0c4[0m
+D (20043) event: running post WIFI_EVENT:20 with handler 0x42017540 and context 0x3fcb9948 on loop 0x3fcae0c4[0m
+V (20053) esp_adapter: thread sem get: sem=0x3fcb9c58[0m
+V (20063) wifi:change: chan<6,0>, dur<0,500>
+V (20063) wifi:ht20 freq=2437, chan=6
+V (20073) wifi:enter start op, arg=0x42017358
+V (20073) wifi:start max timer
+V (20573) wifi:back home chan=<1,0>, current chan=<6,0>
+V (20573) wifi:ht20 freq=2412, chan=1
+D (20573) event: running post WIFI_EVENT:20 with handler 0x4200a610 and context 0x3fcaf350 on loop 0x3fcae0c4[0m
+D (20583) event: running post WIFI_EVENT:20 with handler 0x42017540 and context 0x3fcb9948 on loop 0x3fcae0c4[0m
+V (20593) esp_adapter: thread sem get: sem=0x3fcb9c58[0m
+V (20603) wifi:change: chan<6,0>, dur<0,500>
+V (20603) wifi:ht20 freq=2437, chan=6
+V (20603) wifi:enter start op, arg=0x42017358
+V (20613) wifi:start max timer
+V (21113) wifi:back home chan=<1,0>, current chan=<6,0>
+V (21113) wifi:ht20 freq=2412, chan=1
+D (21113) event: running post WIFI_EVENT:20 with handler 0x4200a610 and context 0x3fcaf350 on loop 0x3fcae0c4[0m
+D (21123) event: running post WIFI_EVENT:20 with handler 0x42017540 and context 0x3fcb9948 on loop 0x3fcae0c4[0m
+V (21133) esp_adapter: thread sem get: sem=0x3fcb9c58[0m
+V (21133) wifi:change: chan<6,0>, dur<0,500>
+V (21143) wifi:ht20 freq=2437, chan=6
+V (21143) wifi:enter start op, arg=0x42017358
+V (21143) wifi:start max timer
+V (21653) wifi:back home chan=<1,0>, current chan=<6,0>
+V (21653) wifi:ht20 freq=2412, chan=1
+D (21653) event: running post WIFI_EVENT:20 with handler 0x4200a610 and context 0x3fcaf350 on loop 0x3fcae0c4[0m
+D (21653) event: running post WIFI_EVENT:20 with handler 0x42017540 and context 0x3fcb9948 on loop 0x3fcae0c4[0m
+V (21673) esp_adapter: thread sem get: sem=0x3fcb9c58[0m
+V (21673) wifi:change: chan<6,0>, dur<0,500>
+V (21673) wifi:ht20 freq=2437, chan=6
+V (21683) wifi:enter start op, arg=0x42017358
+V (21683) wifi:start max timer
+V (22183) wifi:back home chan=<1,0>, current chan=<6,0>
+V (22183) wifi:ht20 freq=2412, chan=1
+D (22193) event: running post WIFI_EVENT:20 with handler 0x4200a610 and context 0x3fcaf350 on loop 0x3fcae0c4[0m
+D (22193) event: running post WIFI_EVENT:20 with handler 0x42017540 and context 0x3fcb9948 on loop 0x3fcae0c4[0m
+V (22203) esp_adapter: thread sem get: sem=0x3fcb9c58[0m
+V (22213) wifi:change: chan<6,0>, dur<0,500>
+V (22213) wifi:ht20 freq=2437, chan=6
+V (22213) wifi:enter start op, arg=0x42017358
+V (22223) wifi:start max timer
+V (22723) wifi:back home chan=<1,0>, current chan=<6,0>
+V (22723) wifi:ht20 freq=2412, chan=1
+D (22723) event: running post WIFI_EVENT:20 with handler 0x4200a610 and context 0x3fcaf350 on loop 0x3fcae0c4[0m
+D (22733) event: running post WIFI_EVENT:20 with handler 0x42017540 and context 0x3fcb9948 on loop 0x3fcae0c4[0m
+V (22743) esp_adapter: thread sem get: sem=0x3fcb9c58[0m
+V (22743) wifi:change: chan<6,0>, dur<0,500>
+V (22753) wifi:ht20 freq=2437, chan=6
+V (22753) wifi:enter start op, arg=0x42017358
+V (22763) wifi:start max timer
+V (23263) wifi:back home chan=<1,0>, current chan=<6,0>
+V (23263) wifi:ht20 freq=2412, chan=1
+D (23263) event: running post WIFI_EVENT:20 with handler 0x4200a610 and context 0x3fcaf350 on loop 0x3fcae0c4[0m
+D (23273) event: running post WIFI_EVENT:20 with handler 0x42017540 and context 0x3fcb9948 on loop 0x3fcae0c4[0m
+V (23283) esp_adapter: thread sem get: sem=0x3fcb9c58[0m
+V (23283) wifi:change: chan<6,0>, dur<0,500>
+V (23283) wifi:ht20 freq=2437, chan=6
+V (23293) wifi:enter start op, arg=0x42017358
+V (23293) wifi:start max timer
+V (23803) wifi:back home chan=<1,0>, current chan=<6,0>
+V (23803) wifi:ht20 freq=2412, chan=1
+D (23803) event: running post WIFI_EVENT:20 with handler 0x4200a610 and context 0x3fcaf350 on loop 0x3fcae0c4[0m
+D (23803) event: running post WIFI_EVENT:20 with handler 0x42017540 and context 0x3fcb9948 on loop 0x3fcae0c4[0m
+V (23813) esp_adapter: thread sem get: sem=0x3fcb9c58[0m
+V (23823) wifi:change: chan<6,0>, dur<0,500>
+V (23823) wifi:ht20 freq=2437, chan=6
+V (23833) wifi:enter start op, arg=0x42017358
+V (23833) wifi:start max timer
+V (24333) wifi:back home chan=<1,0>, current chan=<6,0>
+V (24333) wifi:ht20 freq=2412, chan=1
+D (24333) event: running post WIFI_EVENT:20 with handler 0x4200a610 and context 0x3fcaf350 on loop 0x3fcae0c4[0m
+D (24343) event: running post WIFI_EVENT:20 with handler 0x42017540 and context 0x3fcb9948 on loop 0x3fcae0c4[0m
+V (24353) esp_adapter: thread sem get: sem=0x3fcb9c58[0m
+V (24353) wifi:change: chan<6,0>, dur<0,500>
+V (24363) wifi:ht20 freq=2437, chan=6
+V (24363) wifi:enter start op, arg=0x42017358
+V (24373) wifi:start max timer
+V (24873) wifi:back home chan=<1,0>, current chan=<6,0>
+V (24873) wifi:ht20 freq=2412, chan=1
+D (24873) event: running post WIFI_EVENT:20 with handler 0x4200a610 and context 0x3fcaf350 on loop 0x3fcae0c4[0m
+D (24883) event: running post WIFI_EVENT:20 with handler 0x42017540 and context 0x3fcb9948 on loop 0x3fcae0c4[0m
+V (24893) esp_adapter: thread sem get: sem=0x3fcb9c58[0m
+V (24893) wifi:change: chan<6,0>, dur<0,500>
+V (24903) wifi:ht20 freq=2437, chan=6
+V (24903) wifi:enter start op, arg=0x42017358
+V (24903) wifi:start max timer
+V (25413) wifi:back home chan=<1,0>, current chan=<6,0>
+V (25413) wifi:ht20 freq=2412, chan=1
+D (25413) event: running post WIFI_EVENT:20 with handler 0x4200a610 and context 0x3fcaf350 on loop 0x3fcae0c4[0m
+D (25413) event: running post WIFI_EVENT:20 with handler 0x42017540 and context 0x3fcb9948 on loop 0x3fcae0c4[0m
+V (25423) esp_adapter: thread sem get: sem=0x3fcb9c58[0m
+V (25433) wifi:change: chan<6,0>, dur<0,500>
+V (25433) wifi:ht20 freq=2437, chan=6
+V (25443) wifi:enter start op, arg=0x42017358
+V (25443) wifi:start max timer
+V (25943) wifi:back home chan=<1,0>, current chan=<6,0>
+V (25943) wifi:ht20 freq=2412, chan=1
+D (25943) event: running post WIFI_EVENT:20 with handler 0x4200a610 and context 0x3fcaf350 on loop 0x3fcae0c4[0m
+D (25953) event: running post WIFI_EVENT:20 with handler 0x42017540 and context 0x3fcb9948 on loop 0x3fcae0c4[0m
+V (25963) esp_adapter: thread sem get: sem=0x3fcb9c58[0m
+V (25973) wifi:change: chan<6,0>, dur<0,500>
+V (25973) wifi:ht20 freq=2437, chan=6
+V (25973) wifi:enter start op, arg=0x42017358
+V (25983) wifi:start max timer
+V (26483) wifi:back home chan=<1,0>, current chan=<6,0>
+V (26483) wifi:ht20 freq=2412, chan=1
+D (26483) event: running post WIFI_EVENT:20 with handler 0x4200a610 and context 0x3fcaf350 on loop 0x3fcae0c4[0m
+D (26493) event: running post WIFI_EVENT:20 with handler 0x42017540 and context 0x3fcb9948 on loop 0x3fcae0c4[0m
+V (26503) esp_adapter: thread sem get: sem=0x3fcb9c58[0m
+V (26503) wifi:change: chan<6,0>, dur<0,500>
+V (26513) wifi:ht20 freq=2437, chan=6
+V (26513) wifi:enter start op, arg=0x42017358
+V (26513) wifi:start max timer
+V (27023) wifi:back home chan=<1,0>, current chan=<6,0>
+V (27023) wifi:ht20 freq=2412, chan=1
+D (27023) event: running post WIFI_EVENT:20 with handler 0x4200a610 and context 0x3fcaf350 on loop 0x3fcae0c4[0m
+D (27023) event: running post WIFI_EVENT:20 with handler 0x42017540 and context 0x3fcb9948 on loop 0x3fcae0c4[0m
+V (27033) esp_adapter: thread sem get: sem=0x3fcb9c58[0m
+V (27043) wifi:change: chan<6,0>, dur<0,500>
+V (27043) wifi:ht20 freq=2437, chan=6
+V (27053) wifi:enter start op, arg=0x42017358
+V (27053) wifi:start max timer
+V (27553) wifi:back home chan=<1,0>, current chan=<6,0>
+V (27553) wifi:ht20 freq=2412, chan=1
+D (27553) event: running post WIFI_EVENT:20 with handler 0x4200a610 and context 0x3fcaf350 on loop 0x3fcae0c4[0m
+D (27563) event: running post WIFI_EVENT:20 with handler 0x42017540 and context 0x3fcb9948 on loop 0x3fcae0c4[0m
+V (27573) esp_adapter: thread sem get: sem=0x3fcb9c58[0m
+V (27583) wifi:change: chan<6,0>, dur<0,500>
+V (27583) wifi:ht20 freq=2437, chan=6
+V (27583) wifi:enter start op, arg=0x42017358
+V (27593) wifi:start max timer
+V (28093) wifi:back home chan=<1,0>, current chan=<6,0>
+V (28093) wifi:ht20 freq=2412, chan=1
+D (28093) event: running post WIFI_EVENT:20 with handler 0x4200a610 and context 0x3fcaf350 on loop 0x3fcae0c4[0m
+D (28103) event: running post WIFI_EVENT:20 with handler 0x42017540 and context 0x3fcb9948 on loop 0x3fcae0c4[0m
+V (28113) esp_adapter: thread sem get: sem=0x3fcb9c58[0m
+V (28113) wifi:change: chan<6,0>, dur<0,500>
+V (28123) wifi:ht20 freq=2437, chan=6
+V (28123) wifi:enter start op, arg=0x42017358
+V (28123) wifi:start max timer
+V (28633) wifi:back home chan=<1,0>, current chan=<6,0>
+V (28633) wifi:ht20 freq=2412, chan=1
+D (28633) event: running post WIFI_EVENT:20 with handler 0x4200a610 and context 0x3fcaf350 on loop 0x3fcae0c4[0m
+D (28633) event: running post WIFI_EVENT:20 with handler 0x42017540 and context 0x3fcb9948 on loop 0x3fcae0c4[0m
+V (28643) esp_adapter: thread sem get: sem=0x3fcb9c58[0m
+V (28653) wifi:change: chan<6,0>, dur<0,500>
+V (28653) wifi:ht20 freq=2437, chan=6
+V (28663) wifi:enter start op, arg=0x42017358
+V (28663) wifi:start max timer
+V (29163) wifi:back home chan=<1,0>, current chan=<6,0>
+V (29163) wifi:ht20 freq=2412, chan=1
+D (29173) event: running post WIFI_EVENT:20 with handler 0x4200a610 and context 0x3fcaf350 on loop 0x3fcae0c4[0m
+D (29173) event: running post WIFI_EVENT:20 with handler 0x42017540 and context 0x3fcb9948 on loop 0x3fcae0c4[0m
+V (29183) esp_adapter: thread sem get: sem=0x3fcb9c58[0m
+V (29193) wifi:change: chan<6,0>, dur<0,500>
+V (29193) wifi:ht20 freq=2437, chan=6
+V (29193) wifi:enter start op, arg=0x42017358
+V (29203) wifi:start max timer
+V (29703) wifi:back home chan=<1,0>, current chan=<6,0>
+V (29703) wifi:ht20 freq=2412, chan=1
+D (29703) event: running post WIFI_EVENT:20 with handler 0x4200a610 and context 0x3fcaf350 on loop 0x3fcae0c4[0m
+D (29713) event: running post WIFI_EVENT:20 with handler 0x42017540 and context 0x3fcb9948 on loop 0x3fcae0c4[0m
+V (29723) esp_adapter: thread sem get: sem=0x3fcb9c58[0m
+V (29723) wifi:change: chan<6,0>, dur<0,500>
+V (29733) wifi:ht20 freq=2437, chan=6
+V (29733) wifi:enter start op, arg=0x42017358
+V (29743) wifi:start max timer
+V (30243) wifi:back home chan=<1,0>, current chan=<6,0>
+V (30243) wifi:ht20 freq=2412, chan=1
+D (30243) event: running post WIFI_EVENT:20 with handler 0x4200a610 and context 0x3fcaf350 on loop 0x3fcae0c4[0m
+D (30253) event: running post WIFI_EVENT:20 with handler 0x42017540 and context 0x3fcb9948 on loop 0x3fcae0c4[0m
+V (30263) esp_adapter: thread sem get: sem=0x3fcb9c58[0m
+V (30263) wifi:change: chan<6,0>, dur<0,500>
+V (30263) wifi:ht20 freq=2437, chan=6
+V (30273) wifi:enter start op, arg=0x42017358
+V (30273) wifi:start max timer
+V (30773) wifi:back home chan=<1,0>, current chan=<6,0>
+V (30783) wifi:ht20 freq=2412, chan=1
+D (30783) event: running post WIFI_EVENT:20 with handler 0x4200a610 and context 0x3fcaf350 on loop 0x3fcae0c4[0m
+D (30783) event: running post WIFI_EVENT:20 with handler 0x42017540 and context 0x3fcb9948 on loop 0x3fcae0c4[0m
+V (30793) esp_adapter: thread sem get: sem=0x3fcb9c58[0m
+V (30803) wifi:change: chan<6,0>, dur<0,500>
+V (30803) wifi:ht20 freq=2437, chan=6
+V (30813) wifi:enter start op, arg=0x42017358
+V (30813) wifi:start max timer
+V (31313) wifi:back home chan=<1,0>, current chan=<6,0>
+V (31313) wifi:ht20 freq=2412, chan=1
+D (31313) event: running post WIFI_EVENT:20 with handler 0x4200a610 and context 0x3fcaf350 on loop 0x3fcae0c4[0m
+D (31323) event: running post WIFI_EVENT:20 with handler 0x42017540 and context 0x3fcb9948 on loop 0x3fcae0c4[0m
+V (31333) esp_adapter: thread sem get: sem=0x3fcb9c58[0m
+V (31333) wifi:change: chan<6,0>, dur<0,500>
+V (31343) wifi:ht20 freq=2437, chan=6
+V (31343) wifi:enter start op, arg=0x42017358
+V (31353) wifi:start max timer
+V (31853) wifi:back home chan=<1,0>, current chan=<6,0>
+V (31853) wifi:ht20 freq=2412, chan=1
+D (31853) event: running post WIFI_EVENT:20 with handler 0x4200a610 and context 0x3fcaf350 on loop 0x3fcae0c4[0m
+D (31863) event: running post WIFI_EVENT:20 with handler 0x42017540 and context 0x3fcb9948 on loop 0x3fcae0c4[0m
+V (31873) esp_adapter: thread sem get: sem=0x3fcb9c58[0m
+V (31873) wifi:change: chan<6,0>, dur<0,500>
+V (31883) wifi:ht20 freq=2437, chan=6
+V (31883) wifi:enter start op, arg=0x42017358
+V (31883) wifi:start max timer
+V (32393) wifi:back home chan=<1,0>, current chan=<6,0>
+V (32393) wifi:ht20 freq=2412, chan=1
+D (32393) event: running post WIFI_EVENT:20 with handler 0x4200a610 and context 0x3fcaf350 on loop 0x3fcae0c4[0m
+D (32393) event: running post WIFI_EVENT:20 with handler 0x42017540 and context 0x3fcb9948 on loop 0x3fcae0c4[0m
+V (32403) esp_adapter: thread sem get: sem=0x3fcb9c58[0m
+V (32413) wifi:change: chan<6,0>, dur<0,500>
+V (32413) wifi:ht20 freq=2437, chan=6
+V (32423) wifi:enter start op, arg=0x42017358
+V (32423) wifi:start max timer
+V (32923) wifi:back home chan=<1,0>, current chan=<6,0>
+V (32923) wifi:ht20 freq=2412, chan=1
+D (32923) event: running post WIFI_EVENT:20 with handler 0x4200a610 and context 0x3fcaf350 on loop 0x3fcae0c4[0m
+D (32933) event: running post WIFI_EVENT:20 with handler 0x42017540 and context 0x3fcb9948 on loop 0x3fcae0c4[0m
+V (32943) esp_adapter: thread sem get: sem=0x3fcb9c58[0m
+V (32953) wifi:change: chan<6,0>, dur<0,500>
+V (32953) wifi:ht20 freq=2437, chan=6
+V (32953) wifi:enter start op, arg=0x42017358
+V (32963) wifi:start max timer
+V (33463) wifi:back home chan=<1,0>, current chan=<6,0>
+V (33463) wifi:ht20 freq=2412, chan=1
+D (33463) event: running post WIFI_EVENT:20 with handler 0x4200a610 and context 0x3fcaf350 on loop 0x3fcae0c4[0m
+D (33473) event: running post WIFI_EVENT:20 with handler 0x42017540 and context 0x3fcb9948 on loop 0x3fcae0c4[0m
+V (33483) esp_adapter: thread sem get: sem=0x3fcb9c58[0m
+V (33483) wifi:change: chan<6,0>, dur<0,500>
+V (33493) wifi:ht20 freq=2437, chan=6
+V (33493) wifi:enter start op, arg=0x42017358
+V (33493) wifi:start max timer
+V (34003) wifi:back home chan=<1,0>, current chan=<6,0>
+V (34003) wifi:ht20 freq=2412, chan=1
+D (34003) event: running post WIFI_EVENT:20 with handler 0x4200a610 and context 0x3fcaf350 on loop 0x3fcae0c4[0m
+D (34003) event: running post WIFI_EVENT:20 with handler 0x42017540 and context 0x3fcb9948 on loop 0x3fcae0c4[0m
+V (34013) esp_adapter: thread sem get: sem=0x3fcb9c58[0m
+V (34023) wifi:change: chan<6,0>, dur<0,500>
+V (34023) wifi:ht20 freq=2437, chan=6
+V (34033) wifi:enter start op, arg=0x42017358
+V (34033) wifi:start max timer
+V (34533) wifi:back home chan=<1,0>, current chan=<6,0>
+V (34533) wifi:ht20 freq=2412, chan=1
+D (34533) event: running post WIFI_EVENT:20 with handler 0x4200a610 and context 0x3fcaf350 on loop 0x3fcae0c4[0m
+D (34543) event: running post WIFI_EVENT:20 with handler 0x42017540 and context 0x3fcb9948 on loop 0x3fcae0c4[0m
+V (34553) esp_adapter: thread sem get: sem=0x3fcb9c58[0m
+V (34563) wifi:change: chan<6,0>, dur<0,500>
+V (34563) wifi:ht20 freq=2437, chan=6
+V (34563) wifi:enter start op, arg=0x42017358
+V (34573) wifi:start max timer
+V (35073) wifi:back home chan=<1,0>, current chan=<6,0>
+V (35073) wifi:ht20 freq=2412, chan=1
+D (35073) event: running post WIFI_EVENT:20 with handler 0x4200a610 and context 0x3fcaf350 on loop 0x3fcae0c4[0m
+D (35083) event: running post WIFI_EVENT:20 with handler 0x42017540 and context 0x3fcb9948 on loop 0x3fcae0c4[0m
+V (35093) esp_adapter: thread sem get: sem=0x3fcb9c58[0m
+V (35093) wifi:change: chan<6,0>, dur<0,500>
+V (35103) wifi:ht20 freq=2437, chan=6
+V (35103) wifi:enter start op, arg=0x42017358
+V (35103) wifi:start max timer
+V (35613) wifi:back home chan=<1,0>, current chan=<6,0>
+V (35613) wifi:ht20 freq=2412, chan=1
+D (35613) event: running post WIFI_EVENT:20 with handler 0x4200a610 and context 0x3fcaf350 on loop 0x3fcae0c4[0m
+D (35613) event: running post WIFI_EVENT:20 with handler 0x42017540 and context 0x3fcb9948 on loop 0x3fcae0c4[0m
+V (35623) esp_adapter: thread sem get: sem=0x3fcb9c58[0m
+V (35633) wifi:change: chan<6,0>, dur<0,500>
+V (35633) wifi:ht20 freq=2437, chan=6
+V (35643) wifi:enter start op, arg=0x42017358
+V (35643) wifi:start max timer
+V (36143) wifi:back home chan=<1,0>, current chan=<6,0>
+V (36143) wifi:ht20 freq=2412, chan=1
+D (36153) event: running post WIFI_EVENT:20 with handler 0x4200a610 and context 0x3fcaf350 on loop 0x3fcae0c4[0m
+D (36153) event: running post WIFI_EVENT:20 with handler 0x42017540 and context 0x3fcb9948 on loop 0x3fcae0c4[0m
+V (36163) esp_adapter: thread sem get: sem=0x3fcb9c58[0m
+V (36173) wifi:change: chan<6,0>, dur<0,500>
+V (36173) wifi:ht20 freq=2437, chan=6
+V (36173) wifi:enter start op, arg=0x42017358
+V (36183) wifi:start max timer
+V (36683) wifi:back home chan=<1,0>, current chan=<6,0>
+V (36683) wifi:ht20 freq=2412, chan=1
+D (36683) event: running post WIFI_EVENT:20 with handler 0x4200a610 and context 0x3fcaf350 on loop 0x3fcae0c4[0m
+D (36693) event: running post WIFI_EVENT:20 with handler 0x42017540 and context 0x3fcb9948 on loop 0x3fcae0c4[0m
+V (36703) esp_adapter: thread sem get: sem=0x3fcb9c58[0m
+V (36703) wifi:change: chan<6,0>, dur<0,500>
+V (36713) wifi:ht20 freq=2437, chan=6
+V (36713) wifi:enter start op, arg=0x42017358
+V (36723) wifi:start max timer
+V (37223) wifi:back home chan=<1,0>, current chan=<6,0>
+V (37223) wifi:ht20 freq=2412, chan=1
+D (37223) event: running post WIFI_EVENT:20 with handler 0x4200a610 and context 0x3fcaf350 on loop 0x3fcae0c4[0m
+D (37233) event: running post WIFI_EVENT:20 with handler 0x42017540 and context 0x3fcb9948 on loop 0x3fcae0c4[0m
+V (37243) esp_adapter: thread sem get: sem=0x3fcb9c58[0m
+V (37243) wifi:change: chan<6,0>, dur<0,500>
+V (37243) wifi:ht20 freq=2437, chan=6
+V (37253) wifi:enter start op, arg=0x42017358
+V (37253) wifi:start max timer
+V (37753) wifi:back home chan=<1,0>, current chan=<6,0>
+V (37763) wifi:ht20 freq=2412, chan=1
+D (37763) event: running post WIFI_EVENT:20 with handler 0x4200a610 and context 0x3fcaf350 on loop 0x3fcae0c4[0m
+D (37763) event: running post WIFI_EVENT:20 with handler 0x42017540 and context 0x3fcb9948 on loop 0x3fcae0c4[0m
+V (37773) esp_adapter: thread sem get: sem=0x3fcb9c58[0m
+V (37783) wifi:change: chan<6,0>, dur<0,500>
+V (37783) wifi:ht20 freq=2437, chan=6
+V (37793) wifi:enter start op, arg=0x42017358
+V (37793) wifi:start max timer
+V (38293) wifi:back home chan=<1,0>, current chan=<6,0>
+V (38293) wifi:ht20 freq=2412, chan=1
+D (38293) event: running post WIFI_EVENT:20 with handler 0x4200a610 and context 0x3fcaf350 on loop 0x3fcae0c4[0m
+D (38303) event: running post WIFI_EVENT:20 with handler 0x42017540 and context 0x3fcb9948 on loop 0x3fcae0c4[0m
+V (38313) esp_adapter: thread sem get: sem=0x3fcb9c58[0m
+V (38313) wifi:change: chan<6,0>, dur<0,500>
+V (38323) wifi:ht20 freq=2437, chan=6
+V (38323) wifi:enter start op, arg=0x42017358
+V (38333) wifi:start max timer
+V (38833) wifi:back home chan=<1,0>, current chan=<6,0>
+V (38833) wifi:ht20 freq=2412, chan=1
+D (38833) event: running post WIFI_EVENT:20 with handler 0x4200a610 and context 0x3fcaf350 on loop 0x3fcae0c4[0m
+D (38843) event: running post WIFI_EVENT:20 with handler 0x42017540 and context 0x3fcb9948 on loop 0x3fcae0c4[0m
+V (38853) esp_adapter: thread sem get: sem=0x3fcb9c58[0m
+V (38853) wifi:change: chan<6,0>, dur<0,500>
+V (38863) wifi:ht20 freq=2437, chan=6
+V (38863) wifi:enter start op, arg=0x42017358
+V (38863) wifi:start max timer
+V (39373) wifi:back home chan=<1,0>, current chan=<6,0>
+V (39373) wifi:ht20 freq=2412, chan=1
+D (39373) event: running post WIFI_EVENT:20 with handler 0x4200a610 and context 0x3fcaf350 on loop 0x3fcae0c4[0m
+D (39373) event: running post WIFI_EVENT:20 with handler 0x42017540 and context 0x3fcb9948 on loop 0x3fcae0c4[0m
+V (39383) esp_adapter: thread sem get: sem=0x3fcb9c58[0m
+V (39393) wifi:change: chan<6,0>, dur<0,500>
+V (39393) wifi:ht20 freq=2437, chan=6
+V (39403) wifi:enter start op, arg=0x42017358
+V (39403) wifi:start max timer
+V (39903) wifi:back home chan=<1,0>, current chan=<6,0>
+V (39903) wifi:ht20 freq=2412, chan=1
+D (39903) event: running post WIFI_EVENT:20 with handler 0x4200a610 and context 0x3fcaf350 on loop 0x3fcae0c4[0m
+D (39913) event: running post WIFI_EVENT:20 with handler 0x42017540 and context 0x3fcb9948 on loop 0x3fcae0c4[0m
+V (39923) esp_adapter: thread sem get: sem=0x3fcb9c58[0m
+V (39933) wifi:change: chan<6,0>, dur<0,500>
+V (39933) wifi:ht20 freq=2437, chan=6
+V (39933) wifi:enter start op, arg=0x42017358
+V (39943) wifi:start max timer
+V (40443) wifi:back home chan=<1,0>, current chan=<6,0>
+V (40443) wifi:ht20 freq=2412, chan=1
+D (40443) event: running post WIFI_EVENT:20 with handler 0x4200a610 and context 0x3fcaf350 on loop 0x3fcae0c4[0m
+D (40453) event: running post WIFI_EVENT:20 with handler 0x42017540 and context 0x3fcb9948 on loop 0x3fcae0c4[0m
+V (40463) esp_adapter: thread sem get: sem=0x3fcb9c58[0m
+V (40463) wifi:change: chan<6,0>, dur<0,500>
+V (40473) wifi:ht20 freq=2437, chan=6
+V (40473) wifi:enter start op, arg=0x42017358
+V (40473) wifi:start max timer
+V (40983) wifi:back home chan=<1,0>, current chan=<6,0>
+V (40983) wifi:ht20 freq=2412, chan=1
+D (40983) event: running post WIFI_EVENT:20 with handler 0x4200a610 and context 0x3fcaf350 on loop 0x3fcae0c4[0m
+D (40983) event: running post WIFI_EVENT:20 with handler 0x42017540 and context 0x3fcb9948 on loop 0x3fcae0c4[0m
+V (40993) esp_adapter: thread sem get: sem=0x3fcb9c58[0m
+V (41003) wifi:change: chan<6,0>, dur<0,500>
+V (41003) wifi:ht20 freq=2437, chan=6
+V (41013) wifi:enter start op, arg=0x42017358
+V (41013) wifi:start max timer
+V (41513) wifi:back home chan=<1,0>, current chan=<6,0>
+V (41513) wifi:ht20 freq=2412, chan=1
+D (41513) event: running post WIFI_EVENT:20 with handler 0x4200a610 and context 0x3fcaf350 on loop 0x3fcae0c4[0m
+D (41523) event: running post WIFI_EVENT:20 with handler 0x42017540 and context 0x3fcb9948 on loop 0x3fcae0c4[0m
+V (41533) esp_adapter: thread sem get: sem=0x3fcb9c58[0m
+V (41543) wifi:change: chan<6,0>, dur<0,500>
+V (41543) wifi:ht20 freq=2437, chan=6
+V (41543) wifi:enter start op, arg=0x42017358
+V (41553) wifi:start max timer
+V (42053) wifi:back home chan=<1,0>, current chan=<6,0>
+V (42053) wifi:ht20 freq=2412, chan=1
+D (42053) event: running post WIFI_EVENT:20 with handler 0x4200a610 and context 0x3fcaf350 on loop 0x3fcae0c4[0m
+D (42063) event: running post WIFI_EVENT:20 with handler 0x42017540 and context 0x3fcb9948 on loop 0x3fcae0c4[0m
+V (42073) esp_adapter: thread sem get: sem=0x3fcb9c58[0m
+V (42073) wifi:change: chan<6,0>, dur<0,500>
+V (42083) wifi:ht20 freq=2437, chan=6
+V (42083) wifi:enter start op, arg=0x42017358
+V (42083) wifi:start max timer
+V (42593) wifi:back home chan=<1,0>, current chan=<6,0>
+V (42593) wifi:ht20 freq=2412, chan=1
+D (42593) event: running post WIFI_EVENT:20 with handler 0x4200a610 and context 0x3fcaf350 on loop 0x3fcae0c4[0m
+D (42593) event: running post WIFI_EVENT:20 with handler 0x42017540 and context 0x3fcb9948 on loop 0x3fcae0c4[0m
+V (42603) esp_adapter: thread sem get: sem=0x3fcb9c58[0m
+V (42613) wifi:change: chan<6,0>, dur<0,500>
+V (42613) wifi:ht20 freq=2437, chan=6
+V (42623) wifi:enter start op, arg=0x42017358
+V (42623) wifi:start max timer
+V (43123) wifi:back home chan=<1,0>, current chan=<6,0>
+V (43123) wifi:ht20 freq=2412, chan=1
+D (43133) event: running post WIFI_EVENT:20 with handler 0x4200a610 and context 0x3fcaf350 on loop 0x3fcae0c4[0m
+D (43133) event: running post WIFI_EVENT:20 with handler 0x42017540 and context 0x3fcb9948 on loop 0x3fcae0c4[0m
+V (43143) esp_adapter: thread sem get: sem=0x3fcb9c58[0m
+V (43153) wifi:change: chan<6,0>, dur<0,500>
+V (43153) wifi:ht20 freq=2437, chan=6
+V (43153) wifi:enter start op, arg=0x42017358
+V (43163) wifi:start max timer
+V (43663) wifi:back home chan=<1,0>, current chan=<6,0>
+V (43663) wifi:ht20 freq=2412, chan=1
+D (43663) event: running post WIFI_EVENT:20 with handler 0x4200a610 and context 0x3fcaf350 on loop 0x3fcae0c4[0m
+D (43673) event: running post WIFI_EVENT:20 with handler 0x42017540 and context 0x3fcb9948 on loop 0x3fcae0c4[0m
+V (43683) esp_adapter: thread sem get: sem=0x3fcb9c58[0m
+V (43683) wifi:change: chan<6,0>, dur<0,500>
+V (43693) wifi:ht20 freq=2437, chan=6
+V (43693) wifi:enter start op, arg=0x42017358
+V (43703) wifi:start max timer
+V (44203) wifi:back home chan=<1,0>, current chan=<6,0>
+V (44203) wifi:ht20 freq=2412, chan=1
+D (44203) event: running post WIFI_EVENT:20 with handler 0x4200a610 and context 0x3fcaf350 on loop 0x3fcae0c4[0m
+D (44213) event: running post WIFI_EVENT:20 with handler 0x42017540 and context 0x3fcb9948 on loop 0x3fcae0c4[0m
+V (44223) esp_adapter: thread sem get: sem=0x3fcb9c58[0m
+V (44223) wifi:change: chan<6,0>, dur<0,500>
+V (44223) wifi:ht20 freq=2437, chan=6
+V (44233) wifi:enter start op, arg=0x42017358
+V (44233) wifi:start max timer
+V (44733) wifi:back home chan=<1,0>, current chan=<6,0>
+V (44743) wifi:ht20 freq=2412, chan=1
+D (44743) event: running post WIFI_EVENT:20 with handler 0x4200a610 and context 0x3fcaf350 on loop 0x3fcae0c4[0m
+D (44743) event: running post WIFI_EVENT:20 with handler 0x42017540 and context 0x3fcb9948 on loop 0x3fcae0c4[0m
+V (44753) esp_adapter: thread sem get: sem=0x3fcb9c58[0m
+V (44763) wifi:change: chan<6,0>, dur<0,500>
+V (44763) wifi:ht20 freq=2437, chan=6
+V (44773) wifi:enter start op, arg=0x42017358
+V (44773) wifi:start max timer
+V (45273) wifi:back home chan=<1,0>, current chan=<6,0>
+V (45273) wifi:ht20 freq=2412, chan=1
+D (45273) event: running post WIFI_EVENT:20 with handler 0x4200a610 and context 0x3fcaf350 on loop 0x3fcae0c4[0m
+D (45283) event: running post WIFI_EVENT:20 with handler 0x42017540 and context 0x3fcb9948 on loop 0x3fcae0c4[0m
+V (45293) esp_adapter: thread sem get: sem=0x3fcb9c58[0m
+V (45293) wifi:change: chan<6,0>, dur<0,500>
+V (45303) wifi:ht20 freq=2437, chan=6
+V (45303) wifi:enter start op, arg=0x42017358
+V (45313) wifi:start max timer
+V (45813) wifi:back home chan=<1,0>, current chan=<6,0>
+V (45813) wifi:ht20 freq=2412, chan=1
+D (45813) event: running post WIFI_EVENT:20 with handler 0x4200a610 and context 0x3fcaf350 on loop 0x3fcae0c4[0m
+D (45823) event: running post WIFI_EVENT:20 with handler 0x42017540 and context 0x3fcb9948 on loop 0x3fcae0c4[0m
+V (45833) esp_adapter: thread sem get: sem=0x3fcb9c58[0m
+V (45833) wifi:change: chan<6,0>, dur<0,500>
+V (45843) wifi:ht20 freq=2437, chan=6
+V (45843) wifi:enter start op, arg=0x42017358
+V (45843) wifi:start max timer
+V (46353) wifi:back home chan=<1,0>, current chan=<6,0>
+V (46353) wifi:ht20 freq=2412, chan=1
+D (46353) event: running post WIFI_EVENT:20 with handler 0x4200a610 and context 0x3fcaf350 on loop 0x3fcae0c4[0m
+D (46353) event: running post WIFI_EVENT:20 with handler 0x42017540 and context 0x3fcb9948 on loop 0x3fcae0c4[0m
+V (46363) esp_adapter: thread sem get: sem=0x3fcb9c58[0m
+V (46373) wifi:change: chan<6,0>, dur<0,500>
+V (46373) wifi:ht20 freq=2437, chan=6
+V (46383) wifi:enter start op, arg=0x42017358
+V (46383) wifi:start max timer
+V (46883) wifi:back home chan=<1,0>, current chan=<6,0>
+V (46883) wifi:ht20 freq=2412, chan=1
+D (46883) event: running post WIFI_EVENT:20 with handler 0x4200a610 and context 0x3fcaf350 on loop 0x3fcae0c4[0m
+D (46893) event: running post WIFI_EVENT:20 with handler 0x42017540 and context 0x3fcb9948 on loop 0x3fcae0c4[0m
+V (46903) esp_adapter: thread sem get: sem=0x3fcb9c58[0m
+V (46913) wifi:change: chan<6,0>, dur<0,500>
+V (46913) wifi:ht20 freq=2437, chan=6
+V (46913) wifi:enter start op, arg=0x42017358
+V (46923) wifi:start max timer
+V (47423) wifi:back home chan=<1,0>, current chan=<6,0>
+V (47423) wifi:ht20 freq=2412, chan=1
+D (47423) event: running post WIFI_EVENT:20 with handler 0x4200a610 and context 0x3fcaf350 on loop 0x3fcae0c4[0m
+D (47433) event: running post WIFI_EVENT:20 with handler 0x42017540 and context 0x3fcb9948 on loop 0x3fcae0c4[0m
+V (47443) esp_adapter: thread sem get: sem=0x3fcb9c58[0m
+V (47443) wifi:change: chan<6,0>, dur<0,500>
+V (47453) wifi:ht20 freq=2437, chan=6
+V (47453) wifi:enter start op, arg=0x42017358
+V (47453) wifi:start max timer
+V (47963) wifi:back home chan=<1,0>, current chan=<6,0>
+V (47963) wifi:ht20 freq=2412, chan=1
+D (47963) event: running post WIFI_EVENT:20 with handler 0x4200a610 and context 0x3fcaf350 on loop 0x3fcae0c4[0m
+D (47963) event: running post WIFI_EVENT:20 with handler 0x42017540 and context 0x3fcb9948 on loop 0x3fcae0c4[0m
+V (47973) esp_adapter: thread sem get: sem=0x3fcb9c58[0m
+V (47983) wifi:change: chan<6,0>, dur<0,500>
+V (47983) wifi:ht20 freq=2437, chan=6
+V (47993) wifi:enter start op, arg=0x42017358
+V (47993) wifi:start max timer
+V (48493) wifi:back home chan=<1,0>, current chan=<6,0>
+V (48493) wifi:ht20 freq=2412, chan=1
+D (48493) event: running post WIFI_EVENT:20 with handler 0x4200a610 and context 0x3fcaf350 on loop 0x3fcae0c4[0m
+D (48503) event: running post WIFI_EVENT:20 with handler 0x42017540 and context 0x3fcb9948 on loop 0x3fcae0c4[0m
+V (48513) esp_adapter: thread sem get: sem=0x3fcb9c58[0m
+V (48523) wifi:change: chan<6,0>, dur<0,500>
+V (48523) wifi:ht20 freq=2437, chan=6
+V (48523) wifi:enter start op, arg=0x42017358
+V (48533) wifi:start max timer
+V (49033) wifi:back home chan=<1,0>, current chan=<6,0>
+V (49033) wifi:ht20 freq=2412, chan=1
+D (49033) event: running post WIFI_EVENT:20 with handler 0x4200a610 and context 0x3fcaf350 on loop 0x3fcae0c4[0m
+D (49043) event: running post WIFI_EVENT:20 with handler 0x42017540 and context 0x3fcb9948 on loop 0x3fcae0c4[0m
+V (49053) esp_adapter: thread sem get: sem=0x3fcb9c58[0m
+V (49053) wifi:change: chan<6,0>, dur<0,500>
+V (49063) wifi:ht20 freq=2437, chan=6
+V (49063) wifi:enter start op, arg=0x42017358
+V (49063) wifi:start max timer
+V (49573) wifi:back home chan=<1,0>, current chan=<6,0>
+V (49573) wifi:ht20 freq=2412, chan=1
+D (49573) event: running post WIFI_EVENT:20 with handler 0x4200a610 and context 0x3fcaf350 on loop 0x3fcae0c4[0m
+D (49573) event: running post WIFI_EVENT:20 with handler 0x42017540 and context 0x3fcb9948 on loop 0x3fcae0c4[0m
+V (49583) esp_adapter: thread sem get: sem=0x3fcb9c58[0m
+V (49593) wifi:change: chan<6,0>, dur<0,500>
+V (49593) wifi:ht20 freq=2437, chan=6
+V (49603) wifi:enter start op, arg=0x42017358
+V (49603) wifi:start max timer
+V (50103) wifi:back home chan=<1,0>, current chan=<6,0>
+V (50103) wifi:ht20 freq=2412, chan=1
+D (50113) event: running post WIFI_EVENT:20 with handler 0x4200a610 and context 0x3fcaf350 on loop 0x3fcae0c4[0m
+D (50113) event: running post WIFI_EVENT:20 with handler 0x42017540 and context 0x3fcb9948 on loop 0x3fcae0c4[0m
+V (50123) esp_adapter: thread sem get: sem=0x3fcb9c58[0m
+V (50133) wifi:change: chan<6,0>, dur<0,500>
+V (50133) wifi:ht20 freq=2437, chan=6
+V (50133) wifi:enter start op, arg=0x42017358
+V (50143) wifi:start max timer
+V (50643) wifi:back home chan=<1,0>, current chan=<6,0>
+V (50643) wifi:ht20 freq=2412, chan=1
+D (50643) event: running post WIFI_EVENT:20 with handler 0x4200a610 and context 0x3fcaf350 on loop 0x3fcae0c4[0m
+D (50653) event: running post WIFI_EVENT:20 with handler 0x42017540 and context 0x3fcb9948 on loop 0x3fcae0c4[0m
+V (50663) esp_adapter: thread sem get: sem=0x3fcb9c58[0m
+V (50663) wifi:change: chan<6,0>, dur<0,500>
+V (50673) wifi:ht20 freq=2437, chan=6
+V (50673) wifi:enter start op, arg=0x42017358
+V (50673) wifi:start max timer
+V (51183) wifi:back home chan=<1,0>, current chan=<6,0>
+V (51183) wifi:ht20 freq=2412, chan=1
+D (51183) event: running post WIFI_EVENT:20 with handler 0x4200a610 and context 0x3fcaf350 on loop 0x3fcae0c4[0m
+D (51193) event: running post WIFI_EVENT:20 with handler 0x42017540 and context 0x3fcb9948 on loop 0x3fcae0c4[0m
+V (51203) esp_adapter: thread sem get: sem=0x3fcb9c58[0m
+V (51203) wifi:change: chan<6,0>, dur<0,500>
+V (51203) wifi:ht20 freq=2437, chan=6
+V (51213) wifi:enter start op, arg=0x42017358
+V (51213) wifi:start max timer
