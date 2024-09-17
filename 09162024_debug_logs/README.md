@@ -12,8 +12,7 @@
 
 ----
 
-> out#.log
-> out#.pcapng
+> out#.log, out#.pcapng
 
 | Run                | pcapng               | Result  | Reason                 |
 | ------------------ | -------------------- | ------- | ---------------------- |
