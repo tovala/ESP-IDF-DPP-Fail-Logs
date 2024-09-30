@@ -13,3 +13,4 @@
 - Debug build 09/13/2024 logs, and pcap ([./09172024_debug_logs](./09172024_debug_logs))
 - Debug build 09/13/2024 logs, and sniffed pcap ([./09192024_debug_logs](./09192024_debug_logs))
 - Google Chromecast comparison sniffed pcap logs ([./09202024_chromecast_sniffs](./09202024_chromecast_sniffs))
+- Debug build 09/30/2024 logs, and sniffed pcap ([./09302024_debug_logs](./09302024_debug_logs))
