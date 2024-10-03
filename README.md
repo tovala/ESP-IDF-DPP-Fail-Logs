@@ -15,3 +15,4 @@
 - Google Chromecast comparison sniffed pcap logs ([./09202024_chromecast_sniffs](./09202024_chromecast_sniffs))
 - Debug build 09/30/2024 logs, and sniffed pcap ([./09302024_debug_logs](./09302024_debug_logs))
 - Debug build 10/01/2024 logs, and sniffed pcap ([./10012024_debug_logs](./10012024_debug_logs))
+- Debug build 10/03/2024 logs, and sniffed pcap ([./10032024_debug_logs](./10032024_debug_logs))
